@@ -10,6 +10,11 @@ import UIKit
 
 class ClockViewController: UIViewController {
 
+    @IBOutlet var lblDigitalClock: UILabel!
+    
+    @IBOutlet var imgvClockImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,8 +27,12 @@ class ClockViewController: UIViewController {
         println(width)
         println(height)
         
+        var image : UIImage = UIImage(named: "clockFace.png")!
+        imgvClockImage.image = image;
+        
+        
         UIGraphicsBeginImageContext(self.view.frame.size)
-        var rect : CGRect = CGRectMake(0.0, 0.0, width, height);
+        var rect : CGRect = CGRectMake(0.0, 0.0, 200, 200);
         var contextRef = UIGraphicsGetCurrentContext();
         
         
@@ -31,6 +40,8 @@ class ClockViewController: UIViewController {
         CGContextSetStrokeColorWithColor(contextRef, UIColor.blackColor().CGColor);
         CGContextFillEllipseInRect(contextRef, rect);
         CGContextAddEllipseInRect(contextRef, rect);
+        
+        image.drawInRect(rect)
         
         println("post testey")
         

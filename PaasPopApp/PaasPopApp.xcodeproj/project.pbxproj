@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8DC5AB2A42014E9F26E1A466 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D1BD2BC7DDCBAA7F2C61D3 /* libPods.a */; };
+		F56467121A504424002F68EF /* clockFace.png in Resources */ = {isa = PBXBuildFile; fileRef = F56467111A504424002F68EF /* clockFace.png */; };
+		F56467151A505938002F68EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467141A505938002F68EF /* Person.swift */; };
+		F56467171A505999002F68EF /* MyPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467161A505999002F68EF /* MyPerson.swift */; };
+		F56467191A5059DB002F68EF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467181A5059DB002F68EF /* Friend.swift */; };
+		F564671B1A505A0B002F68EF /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671A1A505A0B002F68EF /* Schedule.swift */; };
+		F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671C1A505A27002F68EF /* TimeSlot.swift */; };
+		F564671F1A505A6B002F68EF /* Podium.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671E1A505A6B002F68EF /* Podium.swift */; };
+		F56467211A505AA7002F68EF /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467201A505AA7002F68EF /* Band.swift */; };
 		F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741941A430CE40074CA41 /* AppDelegate.swift */; };
 		F597419A1A430CE40074CA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59741981A430CE40074CA41 /* Main.storyboard */; };
 		F597419C1A430CE40074CA41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597419B1A430CE40074CA41 /* Images.xcassets */; };
@@ -30,6 +38,14 @@
 		17D1BD2BC7DDCBAA7F2C61D3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F6B1CD84D0E5867C01363B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		1D1CED2DAB496FFB2131E74B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F56467111A504424002F68EF /* clockFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clockFace.png; path = "/Users/fhict/Desktop/Git projects/Paaspop/PaasPopApp/PaasPopApp/../../../../clockFace.png"; sourceTree = "<absolute>"; };
+		F56467141A505938002F68EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		F56467161A505999002F68EF /* MyPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPerson.swift; sourceTree = "<group>"; };
+		F56467181A5059DB002F68EF /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		F564671A1A505A0B002F68EF /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		F564671C1A505A27002F68EF /* TimeSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
+		F564671E1A505A6B002F68EF /* Podium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Podium.swift; sourceTree = "<group>"; };
+		F56467201A505AA7002F68EF /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		F597418F1A430CE40074CA41 /* PaasPopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaasPopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59741931A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59741941A430CE40074CA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +94,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F56467131A50443C002F68EF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F56467111A504424002F68EF /* clockFace.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		F56467221A505AFC002F68EF /* DomainClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F56467161A505999002F68EF /* MyPerson.swift */,
+				F56467181A5059DB002F68EF /* Friend.swift */,
+				F564671A1A505A0B002F68EF /* Schedule.swift */,
+				F564671C1A505A27002F68EF /* TimeSlot.swift */,
+				F564671E1A505A6B002F68EF /* Podium.swift */,
+				F56467201A505AA7002F68EF /* Band.swift */,
+				F56467141A505938002F68EF /* Person.swift */,
+			);
+			name = DomainClasses;
+			sourceTree = "<group>";
+		};
 		F59741861A430CE40074CA41 = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */,
+				F56467221A505AFC002F68EF /* DomainClasses */,
 				F59741941A430CE40074CA41 /* AppDelegate.swift */,
 				F59741981A430CE40074CA41 /* Main.storyboard */,
 				F597419B1A430CE40074CA41 /* Images.xcassets */,
 				F597419D1A430CE40074CA41 /* LaunchScreen.xib */,
+				F56467131A50443C002F68EF /* Images */,
 				F59741921A430CE40074CA41 /* Supporting Files */,
 			);
 			path = PaasPopApp;
@@ -221,6 +261,7 @@
 				F597419A1A430CE40074CA41 /* Main.storyboard in Resources */,
 				F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */,
 				F597419C1A430CE40074CA41 /* Images.xcassets in Resources */,
+				F56467121A504424002F68EF /* clockFace.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F564671B1A505A0B002F68EF /* Schedule.swift in Sources */,
+				F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */,
+				F56467151A505938002F68EF /* Person.swift in Sources */,
 				F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
+				F56467191A5059DB002F68EF /* Friend.swift in Sources */,
+				F564671F1A505A6B002F68EF /* Podium.swift in Sources */,
+				F56467211A505AA7002F68EF /* Band.swift in Sources */,
+				F56467171A505999002F68EF /* MyPerson.swift in Sources */,
 				F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,10 +13,12 @@ class TimeSlot : NSObject {
     var podium : Podium? = nil;
     var periodStart : NSDate? = nil;
     var periodEnd : NSDate? = nil;
+    var band : Band? = nil;
     
-    init(podium : Podium, start : NSDate, end : NSDate){
+    init(podium : Podium, band : Band, start : NSDate, end : NSDate){
         self.podium = podium;
         self.periodStart = start;
         self.periodEnd = end;
+        self.band = band;
     }
 }

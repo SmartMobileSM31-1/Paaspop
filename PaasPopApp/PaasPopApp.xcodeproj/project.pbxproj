@@ -16,6 +16,8 @@
 		F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671C1A505A27002F68EF /* TimeSlot.swift */; };
 		F564671F1A505A6B002F68EF /* Podium.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671E1A505A6B002F68EF /* Podium.swift */; };
 		F56467211A505AA7002F68EF /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467201A505AA7002F68EF /* Band.swift */; };
+		F56467241A517997002F68EF /* BackEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467231A517997002F68EF /* BackEndHandler.swift */; };
+		F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467251A5179A9002F68EF /* WebEndHandler.swift */; };
 		F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741941A430CE40074CA41 /* AppDelegate.swift */; };
 		F597419A1A430CE40074CA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59741981A430CE40074CA41 /* Main.storyboard */; };
 		F597419C1A430CE40074CA41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597419B1A430CE40074CA41 /* Images.xcassets */; };
@@ -46,6 +48,8 @@
 		F564671C1A505A27002F68EF /* TimeSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
 		F564671E1A505A6B002F68EF /* Podium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Podium.swift; sourceTree = "<group>"; };
 		F56467201A505AA7002F68EF /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		F56467231A517997002F68EF /* BackEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackEndHandler.swift; sourceTree = "<group>"; };
+		F56467251A5179A9002F68EF /* WebEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebEndHandler.swift; sourceTree = "<group>"; };
 		F597418F1A430CE40074CA41 /* PaasPopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaasPopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59741931A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59741941A430CE40074CA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				F564671E1A505A6B002F68EF /* Podium.swift */,
 				F56467201A505AA7002F68EF /* Band.swift */,
 				F56467141A505938002F68EF /* Person.swift */,
+				F56467231A517997002F68EF /* BackEndHandler.swift */,
+				F56467251A5179A9002F68EF /* WebEndHandler.swift */,
 			);
 			name = DomainClasses;
 			sourceTree = "<group>";
@@ -317,6 +323,8 @@
 				F56467151A505938002F68EF /* Person.swift in Sources */,
 				F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
 				F56467191A5059DB002F68EF /* Friend.swift in Sources */,
+				F56467241A517997002F68EF /* BackEndHandler.swift in Sources */,
+				F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */,
 				F564671F1A505A6B002F68EF /* Podium.swift in Sources */,
 				F56467211A505AA7002F68EF /* Band.swift in Sources */,
 				F56467171A505999002F68EF /* MyPerson.swift in Sources */,

@@ -8,8 +8,10 @@
 
 import UIKit
 
+// unclear whether we need this, or plain "Person" suffices
 class MyPerson: Person {
     
+    // inserted because otherwise swift starts bitching about inits
     var dummyData : String = "";
     
     init(idInput : String, nameInput : String, dummyData : String){

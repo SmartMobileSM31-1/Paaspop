@@ -12,7 +12,9 @@ class ClockViewController: UIViewController {
 
     @IBOutlet var lblDigitalClock: UILabel!
     
-    @IBOutlet var imgvClockImage: UIImageView!
+    @IBOutlet var clockFaceView: UIImageView!
+    
+    @IBOutlet var clockHandView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -27,29 +29,68 @@ class ClockViewController: UIViewController {
         println(width)
         println(height)
         
-        var image : UIImage = UIImage(named: "clockFace.png")!
-        imgvClockImage.image = image;
+        // example how to insert image
+        var img : UIImage = UIImage(named: "clockFace.png")!
+        clockFaceView.image = img;
         
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        var rect : CGRect = CGRectMake(0.0, 0.0, 200, 200);
-        var contextRef = UIGraphicsGetCurrentContext();
+        
+        let startPoint = CGPoint(x: 100, y: 100);
+        clockFaceView.frame.origin = startPoint;
+        let imageSize = CGSize(width: 200, height: 200)
+        clockHandView = UIImageView(frame: CGRect(origin: startPoint, size: imageSize))
+        self.view.addSubview(clockHandView)
+        let image = drawClockHand(imageSize)
+        clockHandView.image = image
         
         
-        CGContextSetLineWidth(contextRef, 2.0);
-        CGContextSetStrokeColorWithColor(contextRef, UIColor.blackColor().CGColor);
-        CGContextFillEllipseInRect(contextRef, rect);
-        CGContextAddEllipseInRect(contextRef, rect);
+    }
+    
+    func drawClockHand(size: CGSize) -> UIImage {
+        // Setup our context
+        let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
+        let opaque = false
+        let scale: CGFloat = 0
+        UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
+        let context = UIGraphicsGetCurrentContext()
         
-        image.drawInRect(rect)
+        // Setup complete, do drawing here
+        CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor)
+        CGContextSetLineWidth(context, 2.0)
         
-        println("post testey")
+        CGContextStrokeRect(context, bounds)
         
-        var centerPt : CGPoint = CGPointMake(width / 2, height / 2);
-        CGContextBeginPath(contextRef)
-        CGContextAddArc(contextRef, centerPt.x, centerPt.y, 100.0, 0, CGFloat(M_2_PI), 0);
-        CGContextStrokePath(contextRef);
-        UIGraphicsEndImageContext();
+        //example (red crossed square)
+        CGContextBeginPath(context)
+        CGContextMoveToPoint(context, CGRectGetMinX(bounds), CGRectGetMinY(bounds))
+        CGContextAddLineToPoint(context, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds))
+        CGContextMoveToPoint(context, CGRectGetMaxX(bounds), CGRectGetMinY(bounds))
+        CGContextAddLineToPoint(context, CGRectGetMinX(bounds), CGRectGetMaxY(bounds))
+        CGContextStrokePath(context)
+        
+        // draws clock hand
+        CGContextSetStrokeColorWithColor(context, UIColor.greenColor().CGColor);
+        CGContextBeginPath(context);
+        CGContextMoveToPoint(context, bounds.midX, bounds.midY);
+        CGContextAddLineToPoint(context, bounds.midX, bounds.minY);
+        CGContextStrokePath(context);
+        
+        // draws clock circle
+        CGContextSetStrokeColorWithColor(context, UIColor.blueColor().CGColor);
+        CGContextBeginPath(context);
+        CGContextAddEllipseInRect(context, bounds);
+        CGContextStrokePath(context);
+        
+        // Drawing complete, retrieve the finished image and cleanup
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    // returns given number of degrees expressed in radians
+    func degreeToRadian(input:CGFloat)->CGFloat {
+        let output = CGFloat(M_PI) * input/180;
+        return output;
     }
 
     override func didReceiveMemoryWarning() {

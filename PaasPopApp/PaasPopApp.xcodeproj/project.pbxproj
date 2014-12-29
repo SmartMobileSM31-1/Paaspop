@@ -122,6 +122,14 @@
 			name = DomainClasses;
 			sourceTree = "<group>";
 		};
+		F56467271A517EE8002F68EF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F59741861A430CE40074CA41 = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +153,7 @@
 		F59741911A430CE40074CA41 /* PaasPopApp */ = {
 			isa = PBXGroup;
 			children = (
-				F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */,
+				F56467271A517EE8002F68EF /* ViewControllers */,
 				F56467221A505AFC002F68EF /* DomainClasses */,
 				F59741941A430CE40074CA41 /* AppDelegate.swift */,
 				F59741981A430CE40074CA41 /* Main.storyboard */,

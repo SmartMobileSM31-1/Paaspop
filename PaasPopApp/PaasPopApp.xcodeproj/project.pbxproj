@@ -253,6 +253,7 @@
 				TargetAttributes = {
 					F597418E1A430CE40074CA41 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CU3Z5M9BXQ;
 					};
 					F59741A31A430CE40074CA41 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -476,6 +477,7 @@
 			baseConfigurationReference = 1D1CED2DAB496FFB2131E74B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PaasPopApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,6 +489,7 @@
 			baseConfigurationReference = 17F6B1CD84D0E5867C01363B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PaasPopApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

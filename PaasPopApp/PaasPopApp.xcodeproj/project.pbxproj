@@ -29,6 +29,10 @@
 		F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597419D1A430CE40074CA41 /* LaunchScreen.xib */; };
 		F59741AB1A430CE40074CA41 /* PaasPopAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */; };
 		F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */; };
+		F5F7C4E41A5FD8ED00B1B54F /* JSONTimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7C4E31A5FD8ED00B1B54F /* JSONTimeTable.swift */; };
+		F5F7C4E71A672EE100B1B54F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7C4E61A672EE100B1B54F /* SwiftyJSON.swift */; };
+		F5F7C4EA1A67EB0000B1B54F /* JSONgetBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7C4E91A67EB0000B1B54F /* JSONgetBlog.swift */; };
+		F5F7C4EC1A67EC9800B1B54F /* JSONgetAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7C4EB1A67EC9700B1B54F /* JSONgetAct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,11 @@
 		F59741A91A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaasPopAppTests.swift; sourceTree = "<group>"; };
 		F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		F5F7C4E31A5FD8ED00B1B54F /* JSONTimeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTimeTable.swift; sourceTree = "<group>"; };
+		F5F7C4E51A672EE100B1B54F /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		F5F7C4E61A672EE100B1B54F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F5F7C4E91A67EB0000B1B54F /* JSONgetBlog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONgetBlog.swift; sourceTree = "<group>"; };
+		F5F7C4EB1A67EC9700B1B54F /* JSONgetAct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONgetAct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +176,7 @@
 		F59741911A430CE40074CA41 /* PaasPopApp */ = {
 			isa = PBXGroup;
 			children = (
+				F5F7C4E21A5FD87E00B1B54F /* JsonClasses */,
 				F56467271A517EE8002F68EF /* ViewControllers */,
 				F56467221A505AFC002F68EF /* DomainClasses */,
 				F59741941A430CE40074CA41 /* AppDelegate.swift */,
@@ -183,6 +193,8 @@
 		F59741921A430CE40074CA41 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5F7C4E51A672EE100B1B54F /* SwiftyJSON.h */,
+				F5F7C4E61A672EE100B1B54F /* SwiftyJSON.swift */,
 				F59741931A430CE40074CA41 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -203,6 +215,16 @@
 				F59741A91A430CE40074CA41 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5F7C4E21A5FD87E00B1B54F /* JsonClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F5F7C4E31A5FD8ED00B1B54F /* JSONTimeTable.swift */,
+				F5F7C4E91A67EB0000B1B54F /* JSONgetBlog.swift */,
+				F5F7C4EB1A67EC9700B1B54F /* JSONgetAct.swift */,
+			);
+			name = JsonClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,14 +368,18 @@
 				F564671B1A505A0B002F68EF /* Schedule.swift in Sources */,
 				F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */,
 				6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */,
+				F5F7C4E71A672EE100B1B54F /* SwiftyJSON.swift in Sources */,
 				F56467151A505938002F68EF /* Person.swift in Sources */,
 				F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
 				F56467191A5059DB002F68EF /* Friend.swift in Sources */,
 				6C201E021A67F1B000C25A13 /* BandDetailsViewController.swift in Sources */,
 				F56467241A517997002F68EF /* BackEndHandler.swift in Sources */,
+				F5F7C4E41A5FD8ED00B1B54F /* JSONTimeTable.swift in Sources */,
 				F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */,
+				F5F7C4EA1A67EB0000B1B54F /* JSONgetBlog.swift in Sources */,
 				F564671F1A505A6B002F68EF /* Podium.swift in Sources */,
 				6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */,
+				F5F7C4EC1A67EC9800B1B54F /* JSONgetAct.swift in Sources */,
 				F56467211A505AA7002F68EF /* Band.swift in Sources */,
 				F56467171A505999002F68EF /* MyPerson.swift in Sources */,
 				F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */,

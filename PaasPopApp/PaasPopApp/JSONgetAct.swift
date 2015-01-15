@@ -10,7 +10,7 @@ import Foundation
 
 class JSONgetAct
 {
-    var events: [Schedule] = [Schedule]()
+    var events: [Band] = [Band]()
     
     func updateEventsTable() {
         
@@ -19,9 +19,7 @@ class JSONgetAct
         let task = session.dataTaskWithURL(url, completionHandler: {received, response, networkError -> Void in
             if (networkError != nil) {
                 println("Netwerk fout: \(networkError.localizedDescription)")
-                //                var alert = UIAlertController(title: "Verbindings fout", message: "Er kon geen verbinding worden gemaakt met de server.", preferredStyle: UIAlertControllerStyle.Alert)
-                //                alert.addAction(UIAlertAction(title: "Sluiten", style: UIAlertActionStyle.Default, handler: nil))
-                //                self.presentViewController(alert, animated: true, completion: nil)
+
             } else {
                 if (self.cacheManager.update(received)) {
                     self.events = self.cacheManager.getEvents()
@@ -49,10 +47,10 @@ class JSONgetAct
         if (error == nil) {
             
             let eventsArray: NSArray = jsonData["events"] as NSArray
-            self.events = [Schedule]()
+            self.events = [Band]()
             
             for item in eventsArray {
-                let event: Schedule = parseNSDictionary(item as NSDictionary)
+                let event: Band = parseNSDictionary(item as NSDictionary)
                 self.events.append(event)
             }
             return true
@@ -61,14 +59,15 @@ class JSONgetAct
         return false
     }
     
-    func parseNSDictionary(dictionary: NSDictionary) -> Schedule {
+    func parseNSDictionary(dictionary: NSDictionary) -> Band {
         var title: String = dictionary["title"] as String
-        var date: String = dictionary["date"] as String
-        var time: String = dictionary["time"] as String
-        var location: String = dictionary["location"] as String
-        var imageUrl: String = dictionary["image-url"] as String
-        var descriptionShort: String = dictionary["short-description"] as String
-        var descriptionLong: String = dictionary["long-description"] as String
+        var add: String = dictionary["add"] as String
+        var url_title: String = dictionary["url_title"] as String
+        var bio: String = dictionary["bio"] as String
+        var photo: String = dictionary["photo"] as String
+        var times: String = dictionary["short-description"] as String
+        var related: String = dictionary["long-description"] as String
+        var ontdek: String = dictionary["ontdek"] as String
         
         var event = Schedule(title: title, date: date, time: time, location: location, imageUrl: imageUrl, descriptionShort: descriptionShort, descriptionLong: descriptionLong)
         

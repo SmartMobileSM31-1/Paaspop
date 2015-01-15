@@ -62,12 +62,11 @@ class JSONTimeTable {
     
      func parseNSDictionary(dictionary: NSDictionary) -> Schedule {
         var title: String = dictionary["title"] as String
-        var date: String = dictionary["date"] as String
-        var time: String = dictionary["time"] as String
-        var location: String = dictionary["location"] as String
-        var imageUrl: String = dictionary["image-url"] as String
-        var descriptionShort: String = dictionary["short-description"] as String
-        var descriptionLong: String = dictionary["long-description"] as String
+        var add: String = dictionary["add"] as String
+        var url_title: String = dictionary["url_title"] as String
+        var photo: String = dictionary["photo"] as String
+        var times: String = dictionary["times"] as String
+        
         
         var event = Schedule(title: title, date: date, time: time, location: location, imageUrl: imageUrl, descriptionShort: descriptionShort, descriptionLong: descriptionLong)
         

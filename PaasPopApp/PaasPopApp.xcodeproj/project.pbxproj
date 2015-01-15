@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */; };
 		6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50E0721A58ADD7000A5848 /* clockFace.png */; };
+		6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BAC9C1A5FD370007495BF /* MapViewController.swift */; };
+		6C8BACA11A6026A5007495BF /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C8BACA01A6026A5007495BF /* example.jpg */; };
 		6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB7DC9C1A58493A00195D87 /* DemoData.swift */; };
 		8DC5AB2A42014E9F26E1A466 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D1BD2BC7DDCBAA7F2C61D3 /* libPods.a */; };
 		F56467151A505938002F68EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467141A505938002F68EF /* Person.swift */; };
@@ -44,6 +46,8 @@
 		1D1CED2DAB496FFB2131E74B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockEditTableViewController.swift; sourceTree = "<group>"; };
 		6C50E0721A58ADD7000A5848 /* clockFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockFace.png; sourceTree = "<group>"; };
+		6C8BAC9C1A5FD370007495BF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6C8BACA01A6026A5007495BF /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		6CB7DC9C1A58493A00195D87 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		F56467141A505938002F68EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F56467161A505999002F68EF /* MyPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPerson.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		F56467131A50443C002F68EF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6C8BACA01A6026A5007495BF /* example.jpg */,
 				6C50E0721A58ADD7000A5848 /* clockFace.png */,
 			);
 			name = Images;
@@ -131,6 +136,7 @@
 			children = (
 				F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */,
 				6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */,
+				6C8BAC9C1A5FD370007495BF /* MapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */,
 				F597419C1A430CE40074CA41 /* Images.xcassets in Resources */,
 				6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */,
+				6C8BACA11A6026A5007495BF /* example.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +352,7 @@
 				F56467211A505AA7002F68EF /* Band.swift in Sources */,
 				F56467171A505999002F68EF /* MyPerson.swift in Sources */,
 				F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */,
+				6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

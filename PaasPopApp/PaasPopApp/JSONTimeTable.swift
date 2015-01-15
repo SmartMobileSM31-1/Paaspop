@@ -13,27 +13,25 @@ class JSONTimeTable {
  
     func updateEventsTable() {
         
-        let url: NSURL(string: "http://www.paaspop.nl/json/ge0metable?callback=api")
+        let url: NSURL = NSURL(string: "http://www.paaspop.nl/json/ge0metable?callback=api")!
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: {received, response, networkError -> Void in
             if (networkError != nil) {
                 println("Netwerk fout: \(networkError.localizedDescription)")
-                //                var alert = UIAlertController(title: "Verbindings fout", message: "Er kon geen verbinding worden gemaakt met de server.", preferredStyle: UIAlertControllerStyle.Alert)
-                //                alert.addAction(UIAlertAction(title: "Sluiten", style: UIAlertActionStyle.Default, handler: nil))
-                //                self.presentViewController(alert, animated: true, completion: nil)
+
             } else {
-                if (self.cacheManager.update(received)) {
-                    self.events = self.cacheManager.getEvents()
+                if (self.update(received)) {
+                    self.events = self.getEvents()
                 }
             }
             
             dispatch_async(dispatch_get_main_queue(), {
-                self.events = self.cacheManager.getEvents()
+                /*self.events = self.cacheManager.getEvents()
                 self.eventsTableView!.reloadData()
                 if (self.didSwipeDown) {
                     self.refreshControl.endRefreshing()
                     self.didSwipeDown = false
-                }
+                }*/
             })
             
         })
@@ -73,4 +71,16 @@ class JSONTimeTable {
         return event
     }
     
+    func update(received: NSData) -> Bool {
+        println("juw")
+        if (!parseEvents(received)) {
+            println("Event parsing error")
+            return false
+        }
+        return true
+    }
+
+    func getEvents() -> [Schedule] {
+        return events
+    }
 }

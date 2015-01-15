@@ -24,6 +24,13 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
         super.didReceiveMemoryWarning()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var bandDetailViewController: BandDetailsViewController = segue.destinationViewController as BandDetailsViewController
+        var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
+        var selectedTimeSlot = timeSlots[selectedIndex]
+        bandDetailViewController.timeSlot = selectedTimeSlot
+    }
+    
     // Return the amount of cells to display
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count: Int

@@ -21,6 +21,9 @@ class BandDetailsViewController: UIViewController {
         super.viewDidLoad()
         labelTitle.text = timeSlot?.band?.name
         labelDescription.text = timeSlot?.band?.description
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {

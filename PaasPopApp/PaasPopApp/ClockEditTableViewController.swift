@@ -70,12 +70,7 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             timeSlot = timeSlots[indexPath.row]
         }
         
-<<<<<<< HEAD
-        cell.textLabel?.text = timeSlot.band?.name
-        cell.detailTextLabel?.text = timeSlot.podium?.description
-=======
         cell.textLabel.text = timeSlot.act.title
->>>>>>> FETCH_HEAD
         
         return cell
     }

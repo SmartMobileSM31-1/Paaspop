@@ -1,527 +1,524 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 46;
+    objects = {
 
 /* Begin PBXBuildFile section */
-		6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */; };
-		6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E91C91A71135D0097E48D /* DataHelper.swift */; };
-		6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */; };
-		6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50E0721A58ADD7000A5848 /* clockFace.png */; };
-		6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BAC9C1A5FD370007495BF /* MapViewController.swift */; };
-		6C8BACA11A6026A5007495BF /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C8BACA01A6026A5007495BF /* example.jpg */; };
-		6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB7DC9C1A58493A00195D87 /* DemoData.swift */; };
-		F56467151A505938002F68EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467141A505938002F68EF /* Person.swift */; };
-		F56467171A505999002F68EF /* MyPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467161A505999002F68EF /* MyPerson.swift */; };
-		F56467191A5059DB002F68EF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467181A5059DB002F68EF /* Friend.swift */; };
-		F564671B1A505A0B002F68EF /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671A1A505A0B002F68EF /* Schedule.swift */; };
-		F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671C1A505A27002F68EF /* TimeSlot.swift */; };
-		F56467211A505AA7002F68EF /* Act.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467201A505AA7002F68EF /* Act.swift */; };
-		F56467241A517997002F68EF /* BackEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467231A517997002F68EF /* BackEndHandler.swift */; };
-		F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467251A5179A9002F68EF /* WebEndHandler.swift */; };
-		F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741941A430CE40074CA41 /* AppDelegate.swift */; };
-		F597419A1A430CE40074CA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59741981A430CE40074CA41 /* Main.storyboard */; };
-		F597419C1A430CE40074CA41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597419B1A430CE40074CA41 /* Images.xcassets */; };
-		F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597419D1A430CE40074CA41 /* LaunchScreen.xib */; };
-		F59741AB1A430CE40074CA41 /* PaasPopAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */; };
-		F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */; };
+        6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */; };
+        6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E91C91A71135D0097E48D /* DataHelper.swift */; };
+        6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */; };
+        6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50E0721A58ADD7000A5848 /* clockFace.png */; };
+        6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BAC9C1A5FD370007495BF /* MapViewController.swift */; };
+        6C8BACA11A6026A5007495BF /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C8BACA01A6026A5007495BF /* example.jpg */; };
+        6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB7DC9C1A58493A00195D87 /* DemoData.swift */; };
+        F56467151A505938002F68EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467141A505938002F68EF /* Person.swift */; };
+        F56467171A505999002F68EF /* MyPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467161A505999002F68EF /* MyPerson.swift */; };
+        F56467191A5059DB002F68EF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467181A5059DB002F68EF /* Friend.swift */; };
+        F564671B1A505A0B002F68EF /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671A1A505A0B002F68EF /* Schedule.swift */; };
+        F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671C1A505A27002F68EF /* TimeSlot.swift */; };
+        F56467211A505AA7002F68EF /* Act.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467201A505AA7002F68EF /* Act.swift */; };
+        F56467241A517997002F68EF /* BackEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467231A517997002F68EF /* BackEndHandler.swift */; };
+        F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467251A5179A9002F68EF /* WebEndHandler.swift */; };
+        F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741941A430CE40074CA41 /* AppDelegate.swift */; };
+        F597419A1A430CE40074CA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59741981A430CE40074CA41 /* Main.storyboard */; };
+        F597419C1A430CE40074CA41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597419B1A430CE40074CA41 /* Images.xcassets */; };
+        F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597419D1A430CE40074CA41 /* LaunchScreen.xib */; };
+        F59741AB1A430CE40074CA41 /* PaasPopAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */; };
+        F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */; };
+        F5F7C4E71A672EE100B1B54F /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7C4E61A672EE100B1B54F /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F59741A51A430CE40074CA41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F59741871A430CE40074CA41 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F597418E1A430CE40074CA41;
-			remoteInfo = PaasPopApp;
-		};
+        F59741A51A430CE40074CA41 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = F59741871A430CE40074CA41 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = F597418E1A430CE40074CA41;
+            remoteInfo = PaasPopApp;
+        };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActDetailsViewController.swift; sourceTree = "<group>"; };
-		6C2E91C91A71135D0097E48D /* DataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
-		6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockEditTableViewController.swift; sourceTree = "<group>"; };
-		6C50E0721A58ADD7000A5848 /* clockFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockFace.png; sourceTree = "<group>"; };
-		6C8BAC9C1A5FD370007495BF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		6C8BACA01A6026A5007495BF /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
-		6CB7DC9C1A58493A00195D87 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
-		F56467141A505938002F68EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		F56467161A505999002F68EF /* MyPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPerson.swift; sourceTree = "<group>"; };
-		F56467181A5059DB002F68EF /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		F564671A1A505A0B002F68EF /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		F564671C1A505A27002F68EF /* TimeSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
-		F56467201A505AA7002F68EF /* Act.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Act.swift; sourceTree = "<group>"; };
-		F56467231A517997002F68EF /* BackEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackEndHandler.swift; sourceTree = "<group>"; };
-		F56467251A5179A9002F68EF /* WebEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebEndHandler.swift; sourceTree = "<group>"; };
-		F597418F1A430CE40074CA41 /* PaasPopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaasPopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F59741931A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F59741941A430CE40074CA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F59741991A430CE40074CA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F597419B1A430CE40074CA41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F597419E1A430CE40074CA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaasPopAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F59741A91A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaasPopAppTests.swift; sourceTree = "<group>"; };
-		F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+        6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActDetailsViewController.swift; sourceTree = "<group>"; };
+        6C2E91C91A71135D0097E48D /* DataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+        6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockEditTableViewController.swift; sourceTree = "<group>"; };
+        6C50E0721A58ADD7000A5848 /* clockFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockFace.png; sourceTree = "<group>"; };
+        6C8BAC9C1A5FD370007495BF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+        6C8BACA01A6026A5007495BF /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
+        6CB7DC9C1A58493A00195D87 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
+        F56467141A505938002F68EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+        F56467161A505999002F68EF /* MyPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPerson.swift; sourceTree = "<group>"; };
+        F56467181A5059DB002F68EF /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+        F564671A1A505A0B002F68EF /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+        F564671C1A505A27002F68EF /* TimeSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
+        F56467201A505AA7002F68EF /* Act.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Act.swift; sourceTree = "<group>"; };
+        F56467231A517997002F68EF /* BackEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackEndHandler.swift; sourceTree = "<group>"; };
+        F56467251A5179A9002F68EF /* WebEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebEndHandler.swift; sourceTree = "<group>"; };
+        F597418F1A430CE40074CA41 /* PaasPopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaasPopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        F59741931A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        F59741941A430CE40074CA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+        F59741991A430CE40074CA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+        F597419B1A430CE40074CA41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+        F597419E1A430CE40074CA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+        F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaasPopAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+        F59741A91A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaasPopAppTests.swift; sourceTree = "<group>"; };
+        F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+        F5F7C4E51A672EE100B1B54F /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+        F5F7C4E61A672EE100B1B54F /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F597418C1A430CE40074CA41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F59741A11A430CE40074CA41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        F597418C1A430CE40074CA41 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        F59741A11A430CE40074CA41 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6C2E91C81A7113450097E48D /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				6C2E91C91A71135D0097E48D /* DataHelper.swift */,
-			);
-			name = JSON;
-			sourceTree = "<group>";
-		};
-		F56467131A50443C002F68EF /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				6C8BACA01A6026A5007495BF /* example.jpg */,
-				6C50E0721A58ADD7000A5848 /* clockFace.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
-		F56467221A505AFC002F68EF /* DomainClasses */ = {
-			isa = PBXGroup;
-			children = (
-				F56467161A505999002F68EF /* MyPerson.swift */,
-				F56467181A5059DB002F68EF /* Friend.swift */,
-				F564671A1A505A0B002F68EF /* Schedule.swift */,
-				F564671C1A505A27002F68EF /* TimeSlot.swift */,
-				F56467201A505AA7002F68EF /* Act.swift */,
-				F56467141A505938002F68EF /* Person.swift */,
-				F56467231A517997002F68EF /* BackEndHandler.swift */,
-				F56467251A5179A9002F68EF /* WebEndHandler.swift */,
-			);
-			name = DomainClasses;
-			sourceTree = "<group>";
-		};
-		F56467271A517EE8002F68EF /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */,
-				6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */,
-				6C8BAC9C1A5FD370007495BF /* MapViewController.swift */,
-				6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		F59741861A430CE40074CA41 = {
-			isa = PBXGroup;
-			children = (
-				F59741911A430CE40074CA41 /* PaasPopApp */,
-				F59741A71A430CE40074CA41 /* PaasPopAppTests */,
-				F59741901A430CE40074CA41 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		F59741901A430CE40074CA41 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F597418F1A430CE40074CA41 /* PaasPopApp.app */,
-				F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F59741911A430CE40074CA41 /* PaasPopApp */ = {
-			isa = PBXGroup;
-			children = (
-<<<<<<< HEAD
-=======
-				6C2E91C81A7113450097E48D /* JSON */,
->>>>>>> FETCH_HEAD
-				F56467271A517EE8002F68EF /* ViewControllers */,
-				F56467221A505AFC002F68EF /* DomainClasses */,
-				F59741941A430CE40074CA41 /* AppDelegate.swift */,
-				F59741981A430CE40074CA41 /* Main.storyboard */,
-				F597419B1A430CE40074CA41 /* Images.xcassets */,
-				F597419D1A430CE40074CA41 /* LaunchScreen.xib */,
-				F56467131A50443C002F68EF /* Images */,
-				F59741921A430CE40074CA41 /* Supporting Files */,
-				6CB7DC9C1A58493A00195D87 /* DemoData.swift */,
-			);
-			path = PaasPopApp;
-			sourceTree = "<group>";
-		};
-		F59741921A430CE40074CA41 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F59741931A430CE40074CA41 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F59741A71A430CE40074CA41 /* PaasPopAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */,
-				F59741A81A430CE40074CA41 /* Supporting Files */,
-			);
-			path = PaasPopAppTests;
-			sourceTree = "<group>";
-		};
-		F59741A81A430CE40074CA41 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F59741A91A430CE40074CA41 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
+        6C2E91C81A7113450097E48D /* JSON */ = {
+            isa = PBXGroup;
+            children = (
+                6C2E91C91A71135D0097E48D /* DataHelper.swift */,
+            );
+            name = JSON;
+            sourceTree = "<group>";
+        };
+        F56467131A50443C002F68EF /* Images */ = {
+            isa = PBXGroup;
+            children = (
+                6C8BACA01A6026A5007495BF /* example.jpg */,
+                6C50E0721A58ADD7000A5848 /* clockFace.png */,
+            );
+            name = Images;
+            sourceTree = "<group>";
+        };
+        F56467221A505AFC002F68EF /* DomainClasses */ = {
+            isa = PBXGroup;
+            children = (
+                F56467161A505999002F68EF /* MyPerson.swift */,
+                F56467181A5059DB002F68EF /* Friend.swift */,
+                F564671A1A505A0B002F68EF /* Schedule.swift */,
+                F564671C1A505A27002F68EF /* TimeSlot.swift */,
+                F56467201A505AA7002F68EF /* Act.swift */,
+                F56467141A505938002F68EF /* Person.swift */,
+                F56467231A517997002F68EF /* BackEndHandler.swift */,
+                F56467251A5179A9002F68EF /* WebEndHandler.swift */,
+            );
+            name = DomainClasses;
+            sourceTree = "<group>";
+        };
+        F56467271A517EE8002F68EF /* ViewControllers */ = {
+            isa = PBXGroup;
+            children = (
+                F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */,
+                6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */,
+                6C8BAC9C1A5FD370007495BF /* MapViewController.swift */,
+                6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */,
+            );
+            name = ViewControllers;
+            sourceTree = "<group>";
+        };
+        F59741861A430CE40074CA41 = {
+            isa = PBXGroup;
+            children = (
+                F59741911A430CE40074CA41 /* PaasPopApp */,
+                F59741A71A430CE40074CA41 /* PaasPopAppTests */,
+                F59741901A430CE40074CA41 /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        F59741901A430CE40074CA41 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                F597418F1A430CE40074CA41 /* PaasPopApp.app */,
+                F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        F59741911A430CE40074CA41 /* PaasPopApp */ = {
+            isa = PBXGroup;
+            children = (
+                6C2E91C81A7113450097E48D /* JSON */,
+                F56467271A517EE8002F68EF /* ViewControllers */,
+                F56467221A505AFC002F68EF /* DomainClasses */,
+                F59741941A430CE40074CA41 /* AppDelegate.swift */,
+                F59741981A430CE40074CA41 /* Main.storyboard */,
+                F597419B1A430CE40074CA41 /* Images.xcassets */,
+                F597419D1A430CE40074CA41 /* LaunchScreen.xib */,
+                F56467131A50443C002F68EF /* Images */,
+                F59741921A430CE40074CA41 /* Supporting Files */,
+                6CB7DC9C1A58493A00195D87 /* DemoData.swift */,
+            );
+            path = PaasPopApp;
+            sourceTree = "<group>";
+        };
+        F59741921A430CE40074CA41 /* Supporting Files */ = {
+            isa = PBXGroup;
+            children = (
+                F5F7C4E51A672EE100B1B54F /* SwiftyJSON.h */,
+                F5F7C4E61A672EE100B1B54F /* SwiftyJSON.swift */,
+                F59741931A430CE40074CA41 /* Info.plist */,
+            );
+            name = "Supporting Files";
+            sourceTree = "<group>";
+        };
+        F59741A71A430CE40074CA41 /* PaasPopAppTests */ = {
+            isa = PBXGroup;
+            children = (
+                F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */,
+                F59741A81A430CE40074CA41 /* Supporting Files */,
+            );
+            path = PaasPopAppTests;
+            sourceTree = "<group>";
+        };
+        F59741A81A430CE40074CA41 /* Supporting Files */ = {
+            isa = PBXGroup;
+            children = (
+                F59741A91A430CE40074CA41 /* Info.plist */,
+            );
+            name = "Supporting Files";
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F597418E1A430CE40074CA41 /* PaasPopApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F59741AE1A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopApp" */;
-			buildPhases = (
-				F597418B1A430CE40074CA41 /* Sources */,
-				F597418C1A430CE40074CA41 /* Frameworks */,
-				F597418D1A430CE40074CA41 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PaasPopApp;
-			productName = PaasPopApp;
-			productReference = F597418F1A430CE40074CA41 /* PaasPopApp.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F59741A31A430CE40074CA41 /* PaasPopAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F59741B11A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopAppTests" */;
-			buildPhases = (
-				F59741A01A430CE40074CA41 /* Sources */,
-				F59741A11A430CE40074CA41 /* Frameworks */,
-				F59741A21A430CE40074CA41 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F59741A61A430CE40074CA41 /* PBXTargetDependency */,
-			);
-			name = PaasPopAppTests;
-			productName = PaasPopAppTests;
-			productReference = F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
+        F597418E1A430CE40074CA41 /* PaasPopApp */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = F59741AE1A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopApp" */;
+            buildPhases = (
+                F597418B1A430CE40074CA41 /* Sources */,
+                F597418C1A430CE40074CA41 /* Frameworks */,
+                F597418D1A430CE40074CA41 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = PaasPopApp;
+            productName = PaasPopApp;
+            productReference = F597418F1A430CE40074CA41 /* PaasPopApp.app */;
+            productType = "com.apple.product-type.application";
+        };
+        F59741A31A430CE40074CA41 /* PaasPopAppTests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = F59741B11A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopAppTests" */;
+            buildPhases = (
+                F59741A01A430CE40074CA41 /* Sources */,
+                F59741A11A430CE40074CA41 /* Frameworks */,
+                F59741A21A430CE40074CA41 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+                F59741A61A430CE40074CA41 /* PBXTargetDependency */,
+            );
+            name = PaasPopAppTests;
+            productName = PaasPopAppTests;
+            productReference = F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */;
+            productType = "com.apple.product-type.bundle.unit-test";
+        };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F59741871A430CE40074CA41 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Maiko Hermans";
-				TargetAttributes = {
-					F597418E1A430CE40074CA41 = {
-						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = CU3Z5M9BXQ;
-					};
-					F59741A31A430CE40074CA41 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = F597418E1A430CE40074CA41;
-					};
-				};
-			};
-			buildConfigurationList = F597418A1A430CE40074CA41 /* Build configuration list for PBXProject "PaasPopApp" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = F59741861A430CE40074CA41;
-			productRefGroup = F59741901A430CE40074CA41 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				F597418E1A430CE40074CA41 /* PaasPopApp */,
-				F59741A31A430CE40074CA41 /* PaasPopAppTests */,
-			);
-		};
+        F59741871A430CE40074CA41 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastUpgradeCheck = 0610;
+                ORGANIZATIONNAME = "Maiko Hermans";
+                TargetAttributes = {
+                    F597418E1A430CE40074CA41 = {
+                        CreatedOnToolsVersion = 6.1.1;
+                        DevelopmentTeam = CU3Z5M9BXQ;
+                    };
+                    F59741A31A430CE40074CA41 = {
+                        CreatedOnToolsVersion = 6.1.1;
+                        TestTargetID = F597418E1A430CE40074CA41;
+                    };
+                };
+            };
+            buildConfigurationList = F597418A1A430CE40074CA41 /* Build configuration list for PBXProject "PaasPopApp" */;
+            compatibilityVersion = "Xcode 3.2";
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = F59741861A430CE40074CA41;
+            productRefGroup = F59741901A430CE40074CA41 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                F597418E1A430CE40074CA41 /* PaasPopApp */,
+                F59741A31A430CE40074CA41 /* PaasPopAppTests */,
+            );
+        };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F597418D1A430CE40074CA41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F597419A1A430CE40074CA41 /* Main.storyboard in Resources */,
-				F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */,
-				F597419C1A430CE40074CA41 /* Images.xcassets in Resources */,
-				6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */,
-				6C8BACA11A6026A5007495BF /* example.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F59741A21A430CE40074CA41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        F597418D1A430CE40074CA41 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                F597419A1A430CE40074CA41 /* Main.storyboard in Resources */,
+                F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */,
+                F597419C1A430CE40074CA41 /* Images.xcassets in Resources */,
+                6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */,
+                6C8BACA11A6026A5007495BF /* example.jpg in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        F59741A21A430CE40074CA41 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F597418B1A430CE40074CA41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F564671B1A505A0B002F68EF /* Schedule.swift in Sources */,
-				F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */,
-				6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */,
-				F56467151A505938002F68EF /* Person.swift in Sources */,
-				F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
-				F56467191A5059DB002F68EF /* Friend.swift in Sources */,
-				6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */,
-				F56467241A517997002F68EF /* BackEndHandler.swift in Sources */,
-<<<<<<< HEAD
-				F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */,
-				F564671F1A505A6B002F68EF /* Podium.swift in Sources */,
-				6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */,
-				F56467211A505AA7002F68EF /* Band.swift in Sources */,
-=======
-				6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */,
-				F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */,
-				6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */,
-				F56467211A505AA7002F68EF /* Act.swift in Sources */,
->>>>>>> FETCH_HEAD
-				F56467171A505999002F68EF /* MyPerson.swift in Sources */,
-				F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */,
-				6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F59741A01A430CE40074CA41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F59741AB1A430CE40074CA41 /* PaasPopAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        F597418B1A430CE40074CA41 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                F564671B1A505A0B002F68EF /* Schedule.swift in Sources */,
+                F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */,
+                6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */,
+                F5F7C4E71A672EE100B1B54F /* SwiftyJSON.swift in Sources */,
+                F56467151A505938002F68EF /* Person.swift in Sources */,
+                F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
+                F56467191A5059DB002F68EF /* Friend.swift in Sources */,
+                6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */,
+                F56467241A517997002F68EF /* BackEndHandler.swift in Sources */,
+                6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */,
+                F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */,
+                6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */,
+                F56467211A505AA7002F68EF /* Act.swift in Sources */,
+                F56467171A505999002F68EF /* MyPerson.swift in Sources */,
+                F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */,
+                6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        F59741A01A430CE40074CA41 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                F59741AB1A430CE40074CA41 /* PaasPopAppTests.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F59741A61A430CE40074CA41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F597418E1A430CE40074CA41 /* PaasPopApp */;
-			targetProxy = F59741A51A430CE40074CA41 /* PBXContainerItemProxy */;
-		};
+        F59741A61A430CE40074CA41 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = F597418E1A430CE40074CA41 /* PaasPopApp */;
+            targetProxy = F59741A51A430CE40074CA41 /* PBXContainerItemProxy */;
+        };
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F59741981A430CE40074CA41 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F59741991A430CE40074CA41 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F597419D1A430CE40074CA41 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F597419E1A430CE40074CA41 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
+        F59741981A430CE40074CA41 /* Main.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                F59741991A430CE40074CA41 /* Base */,
+            );
+            name = Main.storyboard;
+            sourceTree = "<group>";
+        };
+        F597419D1A430CE40074CA41 /* LaunchScreen.xib */ = {
+            isa = PBXVariantGroup;
+            children = (
+                F597419E1A430CE40074CA41 /* Base */,
+            );
+            name = LaunchScreen.xib;
+            sourceTree = "<group>";
+        };
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F59741AC1A430CE40074CA41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		F59741AD1A430CE40074CA41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F59741AF1A430CE40074CA41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = PaasPopApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		F59741B01A430CE40074CA41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = PaasPopApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		F59741B21A430CE40074CA41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PaasPopAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaasPopApp.app/PaasPopApp";
-			};
-			name = Debug;
-		};
-		F59741B31A430CE40074CA41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PaasPopAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaasPopApp.app/PaasPopApp";
-			};
-			name = Release;
-		};
+        F59741AC1A430CE40074CA41 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+                MTL_ENABLE_DEBUG_INFO = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            };
+            name = Debug;
+        };
+        F59741AD1A430CE40074CA41 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+                COPY_PHASE_STRIP = YES;
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                SDKROOT = iphoneos;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        F59741AF1A430CE40074CA41 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                INFOPLIST_FILE = PaasPopApp/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+            };
+            name = Debug;
+        };
+        F59741B01A430CE40074CA41 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                INFOPLIST_FILE = PaasPopApp/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+            };
+            name = Release;
+        };
+        F59741B21A430CE40074CA41 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                BUNDLE_LOADER = "$(TEST_HOST)";
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(SDKROOT)/Developer/Library/Frameworks",
+                    "$(inherited)",
+                );
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                INFOPLIST_FILE = PaasPopAppTests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaasPopApp.app/PaasPopApp";
+            };
+            name = Debug;
+        };
+        F59741B31A430CE40074CA41 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                BUNDLE_LOADER = "$(TEST_HOST)";
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(SDKROOT)/Developer/Library/Frameworks",
+                    "$(inherited)",
+                );
+                INFOPLIST_FILE = PaasPopAppTests/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaasPopApp.app/PaasPopApp";
+            };
+            name = Release;
+        };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F597418A1A430CE40074CA41 /* Build configuration list for PBXProject "PaasPopApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F59741AC1A430CE40074CA41 /* Debug */,
-				F59741AD1A430CE40074CA41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F59741AE1A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F59741AF1A430CE40074CA41 /* Debug */,
-				F59741B01A430CE40074CA41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F59741B11A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F59741B21A430CE40074CA41 /* Debug */,
-				F59741B31A430CE40074CA41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+        F597418A1A430CE40074CA41 /* Build configuration list for PBXProject "PaasPopApp" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                F59741AC1A430CE40074CA41 /* Debug */,
+                F59741AD1A430CE40074CA41 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        F59741AE1A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopApp" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                F59741AF1A430CE40074CA41 /* Debug */,
+                F59741B01A430CE40074CA41 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        F59741B11A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopAppTests" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                F59741B21A430CE40074CA41 /* Debug */,
+                F59741B31A430CE40074CA41 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 /* End XCConfigurationList section */
-	};
-	rootObject = F59741871A430CE40074CA41 /* Project object */;
+    };
+    rootObject = F59741871A430CE40074CA41 /* Project object */;
 }
+

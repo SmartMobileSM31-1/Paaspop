@@ -19,6 +19,7 @@ class ClockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getTimeFromStart();
 
         // Do any additional setup after loading the view.
         println("testey")
@@ -30,14 +31,19 @@ class ClockViewController: UIViewController {
         println(height)
         
         // example how to insert image
-        var img : UIImage = UIImage(named: "clockFace.png")!
-        clockFaceView.image = img;
+//        var img : UIImage = UIImage(named: "clockFace.png")!
+//        clockFaceView.image = img;
+        
+        let imgWidth : CGFloat = 250;
+        let imgHeight : CGFloat = 250;
+        
+        var screen : CGRect = UIScreen.mainScreen().bounds;
+        var leftBound = screen.midX - (imgWidth / 2);
         
         
-        
-        let startPoint = CGPoint(x: 100, y: 100);
+        let startPoint = CGPoint(x: leftBound, y: 100);
         clockFaceView.frame.origin = startPoint;
-        let imageSize = CGSize(width: 200, height: 200)
+        let imageSize = CGSize(width: imgWidth, height: imgHeight)
         clockHandView = UIImageView(frame: CGRect(origin: startPoint, size: imageSize))
         self.view.addSubview(clockHandView)
         let image = drawClockHand(imageSize)
@@ -54,19 +60,21 @@ class ClockViewController: UIViewController {
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
         let context = UIGraphicsGetCurrentContext()
         
+        let baseSize = size.height;
+        
         // Setup complete, do drawing here
         CGContextSetStrokeColorWithColor(context, UIColor.redColor().CGColor)
         CGContextSetLineWidth(context, 2.0)
         
         CGContextStrokeRect(context, bounds)
         
-        //example (red crossed square)
-        CGContextBeginPath(context)
-        CGContextMoveToPoint(context, CGRectGetMinX(bounds), CGRectGetMinY(bounds))
-        CGContextAddLineToPoint(context, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds))
-        CGContextMoveToPoint(context, CGRectGetMaxX(bounds), CGRectGetMinY(bounds))
-        CGContextAddLineToPoint(context, CGRectGetMinX(bounds), CGRectGetMaxY(bounds))
-        CGContextStrokePath(context)
+//        //example (red crossed square)
+//        CGContextBeginPath(context)
+//        CGContextMoveToPoint(context, CGRectGetMinX(bounds), CGRectGetMinY(bounds))
+//        CGContextAddLineToPoint(context, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds))
+//        CGContextMoveToPoint(context, CGRectGetMaxX(bounds), CGRectGetMinY(bounds))
+//        CGContextAddLineToPoint(context, CGRectGetMinX(bounds), CGRectGetMaxY(bounds))
+//        CGContextStrokePath(context)
         
         // draws clock hand
         CGContextSetStrokeColorWithColor(context, UIColor.greenColor().CGColor);
@@ -81,6 +89,26 @@ class ClockViewController: UIViewController {
         CGContextAddEllipseInRect(context, bounds);
         CGContextStrokePath(context);
         
+        // draws rotated line
+        CGContextSetStrokeColorWithColor(context, UIColor.yellowColor().CGColor);
+        CGContextBeginPath(context);
+        
+        
+        CGContextTranslateCTM(context, bounds.midX, bounds.midY);
+        CGContextRotateCTM(context, degreeToRadian(-73));
+        CGContextMoveToPoint(context, bounds.midX, bounds.midY);
+        CGContextAddLineToPoint(context, bounds.midX, bounds.minY);
+        CGContextTranslateCTM(context, -bounds.midX, -bounds.midY);
+        CGContextStrokePath(context);
+        
+        var boundary : CGFloat = 15;
+        
+        var smallBounds : CGRect = CGRect(origin: CGPointMake(boundary, boundary), size: CGSize(width: baseSize - 2 * boundary, height: baseSize - 2 * boundary));
+        CGContextSetStrokeColorWithColor(context, UIColor.blueColor().CGColor);
+        CGContextBeginPath(context);
+        CGContextAddEllipseInRect(context, smallBounds);
+        CGContextStrokePath(context);
+        
         // Drawing complete, retrieve the finished image and cleanup
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -91,6 +119,17 @@ class ClockViewController: UIViewController {
     func degreeToRadian(input:CGFloat)->CGFloat {
         let output = CGFloat(M_PI) * input/180;
         return output;
+    }
+    
+    // Returns how much time has elapsed since festival start
+    func getTimeFromStart()->Double {
+        let date = NSDate()
+        let startSecondsFromEpoch : Double = 1428069600;
+        let startDate = NSDate(timeIntervalSince1970: startSecondsFromEpoch);
+        let nowFromEpoch = date.timeIntervalSince1970;
+        println(round(nowFromEpoch));
+        
+        return round(nowFromEpoch - startSecondsFromEpoch);
     }
 
     override func didReceiveMemoryWarning() {

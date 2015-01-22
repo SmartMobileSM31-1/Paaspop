@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BandDetailsViewController: UIViewController {
+class ActDetailsViewController: UIViewController {
     
     var timeSlot: TimeSlot?
 
@@ -19,8 +19,9 @@ class BandDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelTitle.text = timeSlot?.band?.name
-        labelDescription.text = timeSlot?.band?.description
+        labelTitle.text = timeSlot?.act.title
+        labelDescription.text = "No data"
+        self.navigationItem.title = timeSlot?.act.title
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
 //        self.navigationController?.navigationBar.translucent = true

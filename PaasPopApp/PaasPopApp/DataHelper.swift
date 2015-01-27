@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import Alamofire
 
 class DataHelper {
     
-    class func getTimeSlots() -> [TimeSlot] {
-        var timeSlotsData: NSData = timeSlotsDownload()
+    class func getTimeSlots(data: NSData) -> [TimeSlot] {
+        var timeSlotsData: NSData = data
         
         var timeSlots: [TimeSlot]
         
@@ -19,12 +20,6 @@ class DataHelper {
         
         
         return timeSlots
-    }
-    
-    class func timeSlotsDownload() -> NSData {
-        var url: NSURL = NSURL(string: "http://sjtek.wouterhabets.com/acts.json")!
-        var data: NSData = NSData(contentsOfURL: url)!
-        return data
     }
     
     class func timeSlotsParseData(data: NSData) -> [TimeSlot] {

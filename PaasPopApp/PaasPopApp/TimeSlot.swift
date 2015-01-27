@@ -26,7 +26,8 @@ class TimeSlot {
         self.act = Act(fromNSDictionary: dictionary)
         let times: NSArray = dictionary["times"] as NSArray
         let time: NSDictionary = times[0] as NSDictionary
-        self.stage = time["stage"] as Int
+//        self.stage = time["stage"] as Int
+        self.stage = 0
         self.start = NSDate()
         self.end = NSDate()
     }

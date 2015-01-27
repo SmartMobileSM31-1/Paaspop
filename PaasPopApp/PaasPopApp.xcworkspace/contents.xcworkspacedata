@@ -4,7 +4,4 @@
    <FileRef
       location = "group:PaasPopApp.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../Alamofire/Alamofire.xcodeproj">
-   </FileRef>
 </Workspace>

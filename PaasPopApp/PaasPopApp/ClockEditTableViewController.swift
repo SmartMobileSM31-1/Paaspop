@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
@@ -18,7 +19,13 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
     
     override func viewDidLoad() {
         
-        timeSlots = DataHelper.getTimeSlots()
+//        timeSlots = DataHelper.getTimeSlots()
+        Alamofire.request(.GET, "http://wouterhabets.com/acts.json")
+            .response { (request, response, data, error) in
+                self.timeSlots = DataHelper.timeSlotsParseData(data as NSData)
+                self.tableView.reloadData()
+                
+        }
         
         super.viewDidLoad()
     }

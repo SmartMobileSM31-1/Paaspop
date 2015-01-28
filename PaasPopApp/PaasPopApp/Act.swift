@@ -8,12 +8,32 @@
 
 import UIKit
 
-class Act {
+class Act: NSObject, NSCoding {
     
-    var title: String
-    var add: String
-    var urlTitle: String
-    var photo: String
+    var title: String?
+    var add: String?
+    var urlTitle: String?
+    var photo: String?
+    
+    required convenience init(coder decoder: NSCoder) {
+        self.init()
+        self.title = decoder.decodeObjectForKey("title") as String?
+        self.add = decoder.decodeObjectForKey("add") as String?
+        self.urlTitle = decoder.decodeObjectForKey("urlTitle") as String?
+        self.photo = decoder.decodeObjectForKey("photo") as String?
+        
+    }
+    
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeObject(self.title, forKey: "title")
+        coder.encodeObject(self.add, forKey: "add")
+        coder.encodeObject(self.urlTitle, forKey: "urlTitle")
+        coder.encodeObject(self.photo, forKey: "photo")
+    }
+    
+    override init() {
+        
+    }
     
     init(title: String, add: String, urlTitle: String, photo: String) {
         self.title = title
@@ -23,10 +43,10 @@ class Act {
     }
     
     init(fromNSDictionary dictionary: NSDictionary) {
-        self.title = dictionary["title"] as String
-        self.add = dictionary["add"] as String
-        self.urlTitle = dictionary["url_title"] as String
-        self.photo = dictionary["photo"] as String
+        self.title = dictionary["title"] as String?
+        self.add = dictionary["add"] as String?
+        self.urlTitle = dictionary["url_title"] as String?
+        self.photo = dictionary["photo"] as String?
     }
    
 }

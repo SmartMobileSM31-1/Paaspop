@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="tBs-4R-XFc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="tBs-4R-XFc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -75,6 +75,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="f8F-7k-fnX" id="nIg-CZ-ZUh"/>
+                                    <outlet property="delegate" destination="f8F-7k-fnX" id="ftt-OS-Ctb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -83,6 +87,7 @@
                     <connections>
                         <outlet property="clockFaceView" destination="vCR-hB-gH9" id="cIT-F9-Mcj"/>
                         <outlet property="clockHandView" destination="bJU-il-HNW" id="CgO-zE-RoD"/>
+                        <outlet property="tableView" destination="jMV-yF-MTh" id="3my-Om-LIl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MzU-fr-yHt" userLabel="First Responder" sceneMemberID="firstResponder"/>

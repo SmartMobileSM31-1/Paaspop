@@ -17,6 +17,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet var clockHandView: UIImageView!
     
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,42 +139,28 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        
+    
+    var favoriteTimeSlots: [TimeSlot]?
+    
+    func getFavoriteTimeSlots() -> [TimeSlot] {
+        if favoriteTimeSlots == nil {
+            if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
+                favoriteTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]?
+            } else {
+                favoriteTimeSlots = [TimeSlot]()
+            }
+        }
+        return favoriteTimeSlots!
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
-        
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return getFavoriteTimeSlots().count
     }
     
-    (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [regions count];
-    }
-    
-    (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Number of rows is the number of time zones in the region for the specified section.
-    Region *region = [regions objectAtIndex:section];
-    return [region.timeZoneWrappers count];
-    }
-    
-    (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    // The header for the section is the region name -- get this from the region at the section index.
-    Region *region = [regions objectAtIndex:section];
-    return [region name];
-    }
-    
-    (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *MyIdentifier = @"MyReuseIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    if (cell == nil) {
-    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier]];
-    }
-    Region *region = [regions objectAtIndex:indexPath.section];
-    TimeZoneWrapper *timeZoneWrapper = [region.timeZoneWrappers objectAtIndex:indexPath.row];
-    cell.textLabel.text = timeZoneWrapper.localeName;
-    return cell;
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell_inf") as UITableViewCell
+        cell.textLabel?.text = getFavoriteTimeSlots()[indexPath.row].act?.title
+        return cell
     }
 
     /*

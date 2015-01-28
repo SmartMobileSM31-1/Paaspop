@@ -20,33 +20,41 @@ class ActDetailsViewController: UIViewController {
     @IBOutlet var labelDescription: UITextView!
     
     @IBAction func buttonAddAction(sender: UIBarButtonItem) {
-//        var storedList: [TimeSlot]? = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? [TimeSlot]
-//        if storedList == nil {
-//            storedList = [TimeSlot]()
-//        }
-//        storedList?.append(self.timeSlot!)
-//        NSUserDefaults.standardUserDefaults().setObject(storedList as NSDictionary, forKey: "favorites")
+        var storedTimeSlots: [TimeSlot]
+        if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
+            storedTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]
+            for timeSlot in storedTimeSlots {
+                println("\(timeSlot.act?.title)")
+            }
+        } else {
+            storedTimeSlots = [TimeSlot]()
+        }
+
+        storedTimeSlots.append(timeSlot!)
+        
+        let data = NSKeyedArchiver.archivedDataWithRootObject(storedTimeSlots)
+        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "favorites")
 
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = nil
-        self.navigationController?.navigationBar.translucent = false
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.translucent = true
+//    }
+//    
+//    override func viewWillDisappear(animated: Bool) {
+//        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = nil
+//        self.navigationController?.navigationBar.translucent = false
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelTitle.text = timeSlot?.act.title
-        self.navigationItem.title = timeSlot?.act.title
-        self.labelAdd.text = timeSlot?.act.add
-        var photoUrl = self.timeSlot?.act.photo
+        labelTitle.text = timeSlot?.act?.title
+        self.navigationItem.title = timeSlot?.act?.title
+        self.labelAdd.text = timeSlot?.act?.add
+        var photoUrl = self.timeSlot?.act?.photo
         
         
         

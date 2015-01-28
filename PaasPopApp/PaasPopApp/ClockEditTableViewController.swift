@@ -76,7 +76,7 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             timeSlot = timeSlots[indexPath.row]
         }
         
-        cell.textLabel?.text = timeSlot.act.title
+        cell.textLabel?.text = timeSlot.act?.title
         
         return cell
     }
@@ -96,7 +96,7 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             
             // Optional scope search code
             // let categoryMatch = (scope == "All") || (band.category == scope)
-            let stringMatch = timeSlot.act.title.lowercaseString.rangeOfString(searchText)
+            let stringMatch = timeSlot.act?.title?.lowercaseString.rangeOfString(searchText)
             return (stringMatch != nil) // && categoryMatch
         })
     }

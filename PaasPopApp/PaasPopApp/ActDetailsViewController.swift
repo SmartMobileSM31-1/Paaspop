@@ -29,19 +29,32 @@ class ActDetailsViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = nil
+        self.navigationController?.navigationBar.translucent = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         labelTitle.text = timeSlot?.act.title
         self.navigationItem.title = timeSlot?.act.title
         self.labelAdd.text = timeSlot?.act.add
-        
         var photoUrl = self.timeSlot?.act.photo
+        
+        
         
         if (self.timeSlot != nil) {
             Alamofire.request(.GET, photoUrl!)
                 .response { (request, response, data, error) in
                     self.imageCover.image = UIImage(data: data as NSData)
+                    self.imageCover.clipsToBounds = true
             }
         }
         

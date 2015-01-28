@@ -24,7 +24,6 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             .response { (request, response, data, error) in
                 self.timeSlots = DataHelper.timeSlotsParseData(data as NSData)
                 self.tableView.reloadData()
-                
         }
         
         super.viewDidLoad()
@@ -77,7 +76,7 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             timeSlot = timeSlots[indexPath.row]
         }
         
-        cell.textLabel.text = timeSlot.act.title
+        cell.textLabel?.text = timeSlot.act.title
         
         return cell
     }

@@ -21,6 +21,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         self.getTimeFromStart();
 
         // Do any additional setup after loading the view.
@@ -51,9 +52,9 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         let image = drawClockHand(imageSize)
         clockHandView.image = image
         
-        
+        */
     }
-    
+    /*
     func drawClockHand(size: CGSize) -> UIImage {
         // Setup our context
         let bounds = CGRect(origin: CGPoint.zeroPoint, size: size)
@@ -133,7 +134,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         return round(nowFromEpoch - startSecondsFromEpoch);
     }
-
+*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

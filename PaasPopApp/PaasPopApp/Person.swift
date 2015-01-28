@@ -10,14 +10,14 @@ import UIKit
 
 class Person : NSObject {
     
-    var id : String = "";
-    var name : String = "";
+    var id : String
+    var name : String
     // schedules are stored as dictionary - String being a description
-    var schedules = [String : Schedule]();
+    var schedules = [TimeSlot]()
     
-    init(idInput : String, nameInput : String){
-        self.id = idInput;
-        self.name = nameInput;
+    init(idInput: String, nameInput: String){
+        self.id = idInput
+        self.name = nameInput
     }
 
     

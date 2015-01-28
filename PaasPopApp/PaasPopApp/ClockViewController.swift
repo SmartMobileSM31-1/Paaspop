@@ -163,6 +163,13 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.textLabel?.text = getFavoriteTimeSlots()[indexPath.row].act?.title
         return cell
     }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            favoriteTimeSlots?.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
 
     /*
     // MARK: - Navigation

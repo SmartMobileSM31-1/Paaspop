@@ -8,17 +8,27 @@
 
 import UIKit
 
-class TimeSlot : NSObject {
+class TimeSlot {
     
-    var podium : Podium? = nil;
-    var periodStart : NSDate? = nil;
-    var periodEnd : NSDate? = nil;
-    var band : Band? = nil;
+    var stage: Int
+    var act: Act
+    var start: NSDate
+    var end: NSDate
     
-    init(podium : Podium, band : Band, start : NSDate, end : NSDate){
-        self.podium = podium;
-        self.periodStart = start;
-        self.periodEnd = end;
-        self.band = band;
+    init(stage: Int, act: Act, start: NSDate, end: NSDate) {
+        self.stage = stage
+        self.act = act
+        self.start = start
+        self.end = end
+    }
+    
+    init(fromNSDictionary dictionary: NSDictionary) {
+        self.act = Act(fromNSDictionary: dictionary)
+        let times: NSArray = dictionary["times"] as NSArray
+        let time: NSDictionary = times[0] as NSDictionary
+//        self.stage = time["stage"] as Int
+        self.stage = 0
+        self.start = NSDate()
+        self.end = NSDate()
     }
 }

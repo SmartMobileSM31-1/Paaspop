@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 class DemoData {
     class func getTimeSlots() -> [TimeSlot] {
         var timeSlots: [TimeSlot] = [TimeSlot]()
@@ -49,3 +49,4 @@ class DemoData {
         }
     }
 }
+*/

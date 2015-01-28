@@ -7,16 +7,26 @@
 //
 
 import UIKit
+import Alamofire
 
 class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     // Contains all time slots
-    var timeSlots: [TimeSlot] = DemoData.getTimeSlots()
+    var timeSlots: [TimeSlot] = [TimeSlot]()
     
     // Contains the search results
     var filteredTimeSlots: [TimeSlot] = [TimeSlot]()
     
     override func viewDidLoad() {
+        
+//        timeSlots = DataHelper.getTimeSlots()
+        Alamofire.request(.GET, "http://wouterhabets.com/acts.json")
+            .response { (request, response, data, error) in
+                self.timeSlots = DataHelper.timeSlotsParseData(data as NSData)
+                self.tableView.reloadData()
+                
+        }
+        
         super.viewDidLoad()
     }
     
@@ -25,10 +35,19 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var bandDetailViewController: BandDetailsViewController = segue.destinationViewController as BandDetailsViewController
-        var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
-        var selectedTimeSlot = timeSlots[selectedIndex]
-        bandDetailViewController.timeSlot = selectedTimeSlot
+        var actDetailViewController: ActDetailsViewController = segue.destinationViewController as ActDetailsViewController
+        var selectedTimeSlot: TimeSlot
+        if self.tableView == self.searchDisplayController!.searchResultsTableView {
+            println("filtered")
+            var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
+            selectedTimeSlot = filteredTimeSlots[selectedIndex]
+        } else {
+            println("not filtered")
+            var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
+            selectedTimeSlot = timeSlots[selectedIndex]
+        }
+        
+        actDetailViewController.timeSlot = selectedTimeSlot
     }
     
     // Return the amount of cells to display
@@ -47,7 +66,7 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
     
     // Fill cells with data
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("bandCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("actCell", forIndexPath: indexPath) as UITableViewCell
         
         var timeSlot: TimeSlot
         
@@ -58,8 +77,7 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             timeSlot = timeSlots[indexPath.row]
         }
         
-        cell.textLabel.text = timeSlot.band?.name
-        cell.detailTextLabel?.text = timeSlot.podium?.description
+        cell.textLabel.text = timeSlot.act.title
         
         return cell
     }
@@ -79,7 +97,7 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             
             // Optional scope search code
             // let categoryMatch = (scope == "All") || (band.category == scope)
-            let stringMatch = timeSlot.band?.name.lowercaseString.rangeOfString(searchText)
+            let stringMatch = timeSlot.act.title.lowercaseString.rangeOfString(searchText)
             return (stringMatch != nil) // && categoryMatch
         })
     }

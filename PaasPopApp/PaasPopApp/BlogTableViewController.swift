@@ -17,9 +17,10 @@ class BlogTableViewController: UITableViewController {
         super.viewDidLoad()
         Alamofire.request(.GET, "http://wouterhabets.com/blog.json")
             .response { (request, response, data, error) in
-                println("asdf")
-                self.blogItems = DataHelper.getBlogItems(data as NSData)
-                self.tableView.reloadData()
+                if error == nil {
+                    self.blogItems = DataHelper.getBlogItems(data as NSData)
+                    self.tableView.reloadData()
+                }
         }
     }
 

@@ -60,8 +60,10 @@ class ActDetailsViewController: UIViewController {
         if (self.timeSlot != nil) {
             Alamofire.request(.GET, photoUrl!)
                 .response { (request, response, data, error) in
-                    self.imageCover.image = UIImage(data: data as NSData)
-                    self.imageCover.clipsToBounds = true
+                    if error == nil {
+                        self.imageCover.image = UIImage(data: data as NSData)
+                        self.imageCover.clipsToBounds = true
+                    }
             }
         }
         

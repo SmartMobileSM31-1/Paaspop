@@ -115,7 +115,7 @@
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0Zy-us-8jB">
                                 <rect key="frame" x="16" y="394" width="288" height="154"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -418,7 +418,7 @@
             <objects>
                 <tableViewController id="fk6-Sq-Fhz" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="F0t-b9-eUh">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="272"/>
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="233"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -499,7 +499,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvE-2H-Qxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2065" y="1787"/>
+            <point key="canvasLocation" x="1505" y="1639"/>
         </scene>
         <!--Friend Detail View Controller-->
         <scene sceneID="gac-04-ns1">
@@ -511,7 +511,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover.jpg" id="hMP-ty-Yiw">
                                 <rect key="frame" x="0.0" y="63" width="320" height="145"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile.jpg" id="lHU-rM-ISK">
@@ -519,22 +519,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="yuS-k8-FFT">
+                                <rect key="frame" x="16" y="315" width="288" height="233"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="fk6-Sq-Fhz" kind="embed" id="GcG-pv-FBh"/>
+                                </connections>
+                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cRa-XY-gYa">
-                                <rect key="frame" x="16" y="231" width="228" height="21"/>
+                                <rect key="frame" x="16" y="216" width="228" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="yuS-k8-FFT">
-                                <rect key="frame" x="16" y="276" width="288" height="272"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="fk6-Sq-Fhz" kind="embed" id="GcG-pv-FBh"/>
-                                </connections>
-                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="xut-IR-aSg"/>
                     <connections>
@@ -543,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C58-Q9-nPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2445" y="1610"/>
+            <point key="canvasLocation" x="2075" y="1850"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0FZ-ky-llZ">
@@ -572,7 +572,7 @@
         <image name="Friends" width="22" height="22"/>
         <image name="Search" width="22" height="22"/>
         <image name="Star" width="22" height="22"/>
-        <image name="clock.png" width="4600" height="4167"/>
+        <image name="clock.png" width="4035" height="3315"/>
         <image name="cover.jpg" width="800" height="600"/>
         <image name="profile.jpg" width="959" height="959"/>
     </resources>

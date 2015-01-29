@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */; };
 		6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E91C91A71135D0097E48D /* DataHelper.swift */; };
+		6C2FF6261A79CB93003E511F /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2FF6251A79CB93003E511F /* AddFriendViewController.swift */; };
+		6C340E051A79BFAE00F18FA4 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C340E041A79BFAE00F18FA4 /* FriendsTableViewController.swift */; };
 		6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */; };
 		6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C50E0721A58ADD7000A5848 /* clockFace.png */; };
 		6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BAC9C1A5FD370007495BF /* MapViewController.swift */; };
@@ -83,6 +85,8 @@
 /* Begin PBXFileReference section */
 		6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActDetailsViewController.swift; sourceTree = "<group>"; };
 		6C2E91C91A71135D0097E48D /* DataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		6C2FF6251A79CB93003E511F /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		6C340E041A79BFAE00F18FA4 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockEditTableViewController.swift; sourceTree = "<group>"; };
 		6C50E0721A58ADD7000A5848 /* clockFace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockFace.png; sourceTree = "<group>"; };
 		6C8BAC9C1A5FD370007495BF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				6C50E0701A58AB88000A5848 /* ClockEditTableViewController.swift */,
 				6C8BAC9C1A5FD370007495BF /* MapViewController.swift */,
 				6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */,
+				6C340E041A79BFAE00F18FA4 /* FriendsTableViewController.swift */,
+				6C2FF6251A79CB93003E511F /* AddFriendViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -378,9 +384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2FF6261A79CB93003E511F /* AddFriendViewController.swift in Sources */,
 				F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */,
 				6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */,
 				F56467151A505938002F68EF /* Person.swift in Sources */,
+				6C340E051A79BFAE00F18FA4 /* FriendsTableViewController.swift in Sources */,
 				F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
 				6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */,
 				6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */,

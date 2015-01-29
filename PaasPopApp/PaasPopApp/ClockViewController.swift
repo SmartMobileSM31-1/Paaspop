@@ -171,9 +171,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         if editingStyle == UITableViewCellEditingStyle.Delete {
             favoriteTimeSlots?.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-            var timeSlots: [TimeSlot] = getFavoriteTimeSlots()
-            timeSlots.removeAtIndex(indexPath.row)
-            setFavoriteTimeSlots(timeSlots)
+            setFavoriteTimeSlots(favoriteTimeSlots!)
         }
     }
 

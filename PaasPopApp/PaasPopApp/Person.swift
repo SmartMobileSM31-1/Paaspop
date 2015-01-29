@@ -8,15 +8,26 @@
 
 import UIKit
 
-class Person : NSObject {
+class Person: NSObject, NSCoding {
     
-    var id : String
-    var name : String
-    // schedules are stored as dictionary - String being a description
+    var name: String?
     var schedules = [TimeSlot]()
     
-    init(idInput: String, nameInput: String){
-        self.id = idInput
+    required convenience init(coder decoder: NSCoder) {
+        self.init()
+        self.name = decoder.decodeObjectForKey("name") as String?
+        
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self.name, forKey: "name")
+    }
+    
+    override init() {
+        
+    }
+    
+    init(nameInput: String){
         self.name = nameInput
     }
 

@@ -16,6 +16,9 @@
 		6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BAC9C1A5FD370007495BF /* MapViewController.swift */; };
 		6C8BACA11A6026A5007495BF /* example.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C8BACA01A6026A5007495BF /* example.jpg */; };
 		6C8F29CF1A7845C90070E741 /* Koffie.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8F29CE1A7845C90070E741 /* Koffie.png */; };
+		6CAC4F1C1A79D61A007BB1DB /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAC4F1B1A79D61A007BB1DB /* FriendDetailViewController.swift */; };
+		6CAC4F1E1A79D7A1007BB1DB /* cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CAC4F1D1A79D7A1007BB1DB /* cover.jpg */; };
+		6CAC4F201A79D7BA007BB1DB /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CAC4F1F1A79D7BA007BB1DB /* profile.jpg */; };
 		6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB7DC9C1A58493A00195D87 /* DemoData.swift */; };
 		6CD8A71C1A79A092000775BA /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8A71B1A79A092000775BA /* map.png */; };
 		6CD8A71E1A79A09A000775BA /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8A71D1A79A09A000775BA /* search.png */; };
@@ -92,6 +95,9 @@
 		6C8BAC9C1A5FD370007495BF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6C8BACA01A6026A5007495BF /* example.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = example.jpg; sourceTree = "<group>"; };
 		6C8F29CE1A7845C90070E741 /* Koffie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Koffie.png; sourceTree = "<group>"; };
+		6CAC4F1B1A79D61A007BB1DB /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
+		6CAC4F1D1A79D7A1007BB1DB /* cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover.jpg; sourceTree = "<group>"; };
+		6CAC4F1F1A79D7BA007BB1DB /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
 		6CB7DC9C1A58493A00195D87 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		6CD8A71B1A79A092000775BA /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		6CD8A71D1A79A09A000775BA /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 		F56467131A50443C002F68EF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6CAC4F1F1A79D7BA007BB1DB /* profile.jpg */,
+				6CAC4F1D1A79D7A1007BB1DB /* cover.jpg */,
 				6CD8A71D1A79A09A000775BA /* search.png */,
 				6CD8A71F1A79A0BB000775BA /* friends.png */,
 				6CD8A71B1A79A092000775BA /* map.png */,
@@ -180,6 +188,7 @@
 				6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */,
 				6C340E041A79BFAE00F18FA4 /* FriendsTableViewController.swift */,
 				6C2FF6251A79CB93003E511F /* AddFriendViewController.swift */,
+				6CAC4F1B1A79D61A007BB1DB /* FriendDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -365,6 +374,8 @@
 				6CD8A71E1A79A09A000775BA /* search.png in Resources */,
 				6C50E0731A58ADD7000A5848 /* clockFace.png in Resources */,
 				6CD8A71C1A79A092000775BA /* map.png in Resources */,
+				6CAC4F1E1A79D7A1007BB1DB /* cover.jpg in Resources */,
+				6CAC4F201A79D7BA007BB1DB /* profile.jpg in Resources */,
 				6C8BACA11A6026A5007495BF /* example.jpg in Resources */,
 				6C8F29CF1A7845C90070E741 /* Koffie.png in Resources */,
 			);
@@ -389,6 +400,7 @@
 				6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */,
 				F56467151A505938002F68EF /* Person.swift in Sources */,
 				6C340E051A79BFAE00F18FA4 /* FriendsTableViewController.swift in Sources */,
+				6CAC4F1C1A79D61A007BB1DB /* FriendDetailViewController.swift in Sources */,
 				F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
 				6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */,
 				6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */,

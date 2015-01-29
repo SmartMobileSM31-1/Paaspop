@@ -17,6 +17,8 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet var clockHandView: UIImageView!
     
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         /*
@@ -138,10 +140,18 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        getFavoriteTimeSlots(true)
+        tableView.reloadData()
+    }
+    
     
     var favoriteTimeSlots: [TimeSlot]?
     
-    func getFavoriteTimeSlots() -> [TimeSlot] {
+    func getFavoriteTimeSlots(force: Bool) -> [TimeSlot] {
+        if force {
+            favoriteTimeSlots = nil
+        }
         if favoriteTimeSlots == nil {
             if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
                 favoriteTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]?
@@ -158,12 +168,12 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return getFavoriteTimeSlots().count
+        return getFavoriteTimeSlots(false).count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell_inf") as UITableViewCell
-        cell.textLabel?.text = getFavoriteTimeSlots()[indexPath.row].act?.title
+        cell.textLabel?.text = getFavoriteTimeSlots(false)[indexPath.row].act?.title
         return cell
     }
     
@@ -172,6 +182,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
             favoriteTimeSlots?.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             setFavoriteTimeSlots(favoriteTimeSlots!)
+            getFavoriteTimeSlots(true)
         }
     }
 

@@ -14,11 +14,18 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var f: [Person] = getFriends()
-        println("\(f[0].name)")
+        var f: [Person] = getFriends(true)
     }
     
-    func getFriends() -> [Person] {
+    override func viewDidAppear(animated: Bool) {
+        getFriends(true)
+        self.tableView.reloadData()
+    }
+    
+    func getFriends(force: Bool) -> [Person] {
+        if force {
+            friends = nil
+        }
         if friends == nil {
             if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("friends") as? NSData {
                 friends = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [Person]?
@@ -45,21 +52,21 @@ class FriendsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return getFriends().count
+        return getFriends(false).count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("friendCell") as UITableViewCell
-        cell.textLabel?.text = getFriends()[indexPath.row].name
+        cell.textLabel?.text = getFriends(false)[indexPath.row].name
         return cell
     }
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
+            friends?.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-            var fs: [Person] = getFriends()
-            fs.removeAtIndex(indexPath.row)
-            setFriends(fs)
+            setFriends(friends!)
+            getFriends(true)
         }
     }
 }

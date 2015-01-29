@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AddFriendViewController: UIViewController {
 
     var friends: [Person]?
+    let captureSession = AVCaptureSession()
+    var captureDevice: AVCaptureDevice?
+    var previewLayer : AVCaptureVideoPreviewLayer?
+    @IBOutlet var emptyView: UIView!
     
     @IBAction func addFriendAction(sender: UIBarButtonItem) {
         var f: [Person] = getFriends()
@@ -43,6 +48,37 @@ class AddFriendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        captureSession.sessionPreset = AVCaptureSessionPresetLow
+        let devices = AVCaptureDevice.devices()
+        println(devices)
+        
+        for device in devices {
+            // Make sure this particular device supports video
+            if (device.hasMediaType(AVMediaTypeVideo)) {
+                // Finally check the position and confirm we've got the back camera
+                if(device.position == AVCaptureDevicePosition.Back) {
+                    captureDevice = device as? AVCaptureDevice
+                }
+            }
+        }
+        
+        if captureDevice != nil {
+            beginSession()
+        }
+    }
+    
+    func beginSession() {
+        var err : NSError? = nil
+        captureSession.addInput(AVCaptureDeviceInput(device: captureDevice, error: &err))
+        
+        if err != nil {
+            println("error: \(err?.localizedDescription)")
+        }
+        
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        self.view.layer.addSublayer(previewLayer)
+        previewLayer?.frame = emptyView.layer.frame
+        captureSession.startRunning()
     }
 
     override func didReceiveMemoryWarning() {

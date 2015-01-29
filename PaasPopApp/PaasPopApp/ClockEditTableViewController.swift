@@ -36,12 +36,11 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var actDetailViewController: ActDetailsViewController = segue.destinationViewController as ActDetailsViewController
         var selectedTimeSlot: TimeSlot
+        
         if self.tableView == self.searchDisplayController!.searchResultsTableView {
-            println("filtered")
             var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
             selectedTimeSlot = filteredTimeSlots[selectedIndex]
         } else {
-            println("not filtered")
             var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
             selectedTimeSlot = timeSlots[selectedIndex]
         }

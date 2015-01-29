@@ -10,10 +10,12 @@ import UIKit
 
 class FriendDetailViewController: UIViewController {
 
+    var friend: Person?
     @IBOutlet var labelName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        labelName.text = friend?.name
     }
 
     override func didReceiveMemoryWarning() {

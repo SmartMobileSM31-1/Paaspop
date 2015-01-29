@@ -28,15 +28,16 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 1
-        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
-        {
-            image = UIImage(named: "example.jpg")!
-        }
-        else
-        {
-            image = UIImage(named: "example copy.jpg")!
-        }
+//        // 1
+//        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
+//        {
+//            image = UIImage(named: "example.jpg")!
+//        }
+//        else
+//        {
+//            image = UIImage(named: "example copy.jpg")!
+//        }
+        image = UIImage(named: "map.png")
         imageView = UIImageView(image: image)
         imageView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:image.size)
         scrollView.addSubview(imageView)

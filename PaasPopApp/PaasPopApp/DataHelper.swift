@@ -11,6 +11,27 @@ import Alamofire
 
 class DataHelper {
     
+    class func getBlogItems(data: NSData) -> [BlogItem] {
+        var blogItemsData: NSData = data
+        var blogItems: [BlogItem]
+        blogItems = blogItemsParseData(blogItemsData)
+        return blogItems
+    }
+    
+    class func blogItemsParseData(data: NSData) -> [BlogItem] {
+        var returnData: [BlogItem] = [BlogItem]()
+        var error: NSError?
+        let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as NSDictionary
+        
+        if error == nil {
+            let blogItemsArray: NSArray = jsonData["news"] as NSArray
+            for blogItem in blogItemsArray {
+                returnData.append(BlogItem(fromNSDictionary: blogItem as NSDictionary))
+            }
+        }
+        return returnData
+    }
+    
     class func getTimeSlots(data: NSData) -> [TimeSlot] {
         var timeSlotsData: NSData = data
         

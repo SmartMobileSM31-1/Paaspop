@@ -55,8 +55,7 @@ class ActDetailsViewController: UIViewController {
         self.navigationItem.title = timeSlot?.act?.title
         self.labelAdd.text = timeSlot?.act?.add
         var photoUrl = self.timeSlot?.act?.photo
-        
-        
+        self.labelDescription.text = self.timeSlot?.act?.actDescription
         
         if (self.timeSlot != nil) {
             Alamofire.request(.GET, photoUrl!)

@@ -14,6 +14,7 @@ class Act: NSObject, NSCoding {
     var add: String?
     var urlTitle: String?
     var photo: String?
+    var actDescription: String?
     
     required convenience init(coder decoder: NSCoder) {
         self.init()
@@ -21,6 +22,7 @@ class Act: NSObject, NSCoding {
         self.add = decoder.decodeObjectForKey("add") as String?
         self.urlTitle = decoder.decodeObjectForKey("urlTitle") as String?
         self.photo = decoder.decodeObjectForKey("photo") as String?
+        self.actDescription = decoder.decodeObjectForKey("description") as String?
         
     }
     
@@ -29,6 +31,7 @@ class Act: NSObject, NSCoding {
         coder.encodeObject(self.add, forKey: "add")
         coder.encodeObject(self.urlTitle, forKey: "urlTitle")
         coder.encodeObject(self.photo, forKey: "photo")
+        coder.encodeObject(self.actDescription, forKey: "description")
     }
     
     override init() {
@@ -40,6 +43,11 @@ class Act: NSObject, NSCoding {
         self.add = add
         self.urlTitle = urlTitle
         self.photo = photo
+        self.actDescription = ""
+        
+        if title == "Anouk" {
+            self.actDescription = "Anouk Teeuwe (born 8 April 1975), professionally known by the mononym Anouk, is a Dutch singer-songwriter and producer. After her breakthrough in 1997 with the single \"Nobody's Wife\", she had numerous hit singles in the Dutch and Belgian charts, such as \"R U Kiddin' Me\", \"Michel\", \"Girl\", \"Lost\", \"Modern World\", \"Three Days in a Row\" and \"Woman\"."
+        }
     }
     
     init(fromNSDictionary dictionary: NSDictionary) {

@@ -17,8 +17,6 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet var clockHandView: UIImageView!
     
-    @IBOutlet var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         /*

@@ -19,12 +19,8 @@
 		6CD8A71E1A79A09A000775BA /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8A71D1A79A09A000775BA /* search.png */; };
 		6CD8A7201A79A0BB000775BA /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8A71F1A79A0BB000775BA /* friends.png */; };
 		F56467151A505938002F68EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467141A505938002F68EF /* Person.swift */; };
-		F56467171A505999002F68EF /* MyPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467161A505999002F68EF /* MyPerson.swift */; };
-		F56467191A5059DB002F68EF /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467181A5059DB002F68EF /* Friend.swift */; };
 		F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671C1A505A27002F68EF /* TimeSlot.swift */; };
 		F56467211A505AA7002F68EF /* Act.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467201A505AA7002F68EF /* Act.swift */; };
-		F56467241A517997002F68EF /* BackEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467231A517997002F68EF /* BackEndHandler.swift */; };
-		F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467251A5179A9002F68EF /* WebEndHandler.swift */; };
 		F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741941A430CE40074CA41 /* AppDelegate.swift */; };
 		F597419A1A430CE40074CA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59741981A430CE40074CA41 /* Main.storyboard */; };
 		F597419C1A430CE40074CA41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597419B1A430CE40074CA41 /* Images.xcassets */; };
@@ -98,12 +94,8 @@
 		6CD8A71F1A79A0BB000775BA /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
 		F546AE9E1A7949A1003C4014 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../Downloads/Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		F56467141A505938002F68EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		F56467161A505999002F68EF /* MyPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPerson.swift; sourceTree = "<group>"; };
-		F56467181A5059DB002F68EF /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		F564671C1A505A27002F68EF /* TimeSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
 		F56467201A505AA7002F68EF /* Act.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Act.swift; sourceTree = "<group>"; };
-		F56467231A517997002F68EF /* BackEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackEndHandler.swift; sourceTree = "<group>"; };
-		F56467251A5179A9002F68EF /* WebEndHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebEndHandler.swift; sourceTree = "<group>"; };
 		F597418F1A430CE40074CA41 /* PaasPopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaasPopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59741931A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59741941A430CE40074CA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,13 +160,9 @@
 		F56467221A505AFC002F68EF /* DomainClasses */ = {
 			isa = PBXGroup;
 			children = (
-				F56467161A505999002F68EF /* MyPerson.swift */,
-				F56467181A5059DB002F68EF /* Friend.swift */,
 				F564671C1A505A27002F68EF /* TimeSlot.swift */,
 				F56467201A505AA7002F68EF /* Act.swift */,
 				F56467141A505938002F68EF /* Person.swift */,
-				F56467231A517997002F68EF /* BackEndHandler.swift */,
-				F56467251A5179A9002F68EF /* WebEndHandler.swift */,
 			);
 			name = DomainClasses;
 			sourceTree = "<group>";
@@ -394,14 +382,10 @@
 				6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */,
 				F56467151A505938002F68EF /* Person.swift in Sources */,
 				F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */,
-				F56467191A5059DB002F68EF /* Friend.swift in Sources */,
 				6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */,
-				F56467241A517997002F68EF /* BackEndHandler.swift in Sources */,
 				6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */,
-				F56467261A5179A9002F68EF /* WebEndHandler.swift in Sources */,
 				6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */,
 				F56467211A505AA7002F68EF /* Act.swift in Sources */,
-				F56467171A505999002F68EF /* MyPerson.swift in Sources */,
 				F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */,
 				6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */,
 			);

@@ -293,6 +293,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonAdd" destination="Ihd-Nt-xfW" id="wPO-xs-AHb"/>
                         <outlet property="imageCover" destination="7Xz-2G-0me" id="GKI-G6-4dD"/>
                         <outlet property="labelAdd" destination="sut-lC-0bk" id="kZV-bh-mnb"/>
                         <outlet property="labelDescription" destination="x7V-sm-mlg" id="aYM-oS-apt"/>
@@ -521,7 +522,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" id="yuS-k8-FFT">
-                                <rect key="frame" x="16" y="315.00000046046512" width="288" height="233"/>
+                                <rect key="frame" x="16" y="315.00000093773542" width="288" height="233"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <connections>
                                     <segue destination="fk6-Sq-Fhz" kind="embed" id="GcG-pv-FBh"/>

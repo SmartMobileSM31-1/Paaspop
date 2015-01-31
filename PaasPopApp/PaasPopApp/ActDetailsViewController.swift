@@ -18,15 +18,21 @@ class ActDetailsViewController: UIViewController {
     @IBOutlet var imageBand: UIImageView!
     @IBOutlet var labelAdd: UILabel!
     @IBOutlet var labelDescription: UITextView!
+    @IBOutlet var buttonAdd: UIBarButtonItem!
     
     @IBAction func buttonAddAction(sender: UIBarButtonItem) {
-        var storedTimeSlots: [TimeSlot]
+        buttonAdd.image = UIImage(named: "StarFilled")
         var duplicate = false
+        var storedTimeSlots: [TimeSlot]
         if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
             storedTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]
-            for timeSlot in storedTimeSlots {
-                if self.timeSlot?.act?.title == timeSlot.act?.title {
+            for var i = 0; i < storedTimeSlots.count; i++ {
+                if self.timeSlot?.act?.title == storedTimeSlots[i].act?.title {
+                    println("is duplicate")
+                    storedTimeSlots.removeAtIndex(i)
+                    buttonAdd.image = UIImage(named: "Star")
                     duplicate = true
+                    break
                 }
             }
         } else {
@@ -35,12 +41,12 @@ class ActDetailsViewController: UIViewController {
 
         if !duplicate {
             storedTimeSlots.append(timeSlot!)
+        }
             storedTimeSlots.sort({ (timeSlot1, timeSlot2) -> Bool in
                 return timeSlot1.act?.title < timeSlot2.act?.title
             })
             let data = NSKeyedArchiver.archivedDataWithRootObject(storedTimeSlots)
             NSUserDefaults.standardUserDefaults().setObject(data, forKey: "favorites")
-        }
 
     }
     
@@ -74,6 +80,15 @@ class ActDetailsViewController: UIViewController {
             }
         }
         
+        
+        if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
+            var storedTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]
+            for timeSlot in storedTimeSlots {
+                if self.timeSlot?.act?.title == timeSlot.act?.title {
+                    buttonAdd.image = UIImage(named: "StarFilled")
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

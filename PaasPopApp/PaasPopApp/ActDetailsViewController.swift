@@ -16,7 +16,6 @@ class ActDetailsViewController: UIViewController {
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var imageCover: UIImageView!
     @IBOutlet var imageBand: UIImageView!
-    @IBOutlet var labelAdd: UILabel!
     @IBOutlet var labelDescription: UITextView!
     @IBOutlet var buttonAdd: UIBarButtonItem!
     
@@ -66,16 +65,30 @@ class ActDetailsViewController: UIViewController {
         super.viewDidLoad()
         labelTitle.text = timeSlot?.act?.title
         self.navigationItem.title = timeSlot?.act?.title
-        self.labelAdd.text = timeSlot?.act?.add
         var photoUrl = self.timeSlot?.act?.photo
         self.labelDescription.text = self.timeSlot?.act?.actDescription
         println("Start: \(self.timeSlot?.start) End: \(self.timeSlot?.end)")
+        if self.timeSlot?.act?.add != nil {
+            self.labelDescription.text = (self.timeSlot?.act?.add)! + "\n\n"
+        }
         if (self.timeSlot != nil) {
             Alamofire.request(.GET, photoUrl!)
                 .response { (request, response, data, error) in
                     if error == nil {
                         self.imageCover.image = UIImage(data: data as NSData)
                         self.imageCover.clipsToBounds = true
+                    }
+            }
+            let apiKey = "WUVZJBODI4TAKAJMJ"
+            var actString: String = (self.timeSlot?.act?.title)!
+            var formattedAct: String = actString.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            var apiUrl = NSURL(string: "http://developer.echonest.com/api/v4/artist/biographies?api_key=\(apiKey)&name=\(formattedAct)&format=json&results=1&start=0&license=cc-by-sa")!
+            println("\(apiUrl)")
+            Alamofire.request(.GET, apiUrl)
+                .response { (request, response, data, error) in
+                    if error == nil {
+                        var bioString: String = DataHelper.getBioFromData(data as NSData)
+                        self.labelDescription.text! += bioString
                     }
             }
         }

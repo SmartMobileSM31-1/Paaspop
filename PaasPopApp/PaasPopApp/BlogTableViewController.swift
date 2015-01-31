@@ -20,6 +20,9 @@ class BlogTableViewController: UITableViewController {
                 if error == nil {
                     self.blogItems = DataHelper.getBlogItems(data as NSData)
                     self.tableView.reloadData()
+                } else {
+                    self.blogItems = DataHelper.getBlogItems()
+                    self.tableView.reloadData()
                 }
         }
     }

@@ -53,14 +53,14 @@ class CircleTimeSlotView: UIView {
             endTime = CGFloat(0)
         }
         
-        var lineWidth = 80
+        var lineWidth = 55
         if slotLayer != nil {
             switch slotLayer! {
-            case 0: lineWidth = 80
-            case 1: lineWidth = 85
-            case 2: lineWidth = 90
-            case 3: lineWidth = 95
-            default: lineWidth = 80
+            case 0: lineWidth = 55
+            case 1: lineWidth = 60
+            case 2: lineWidth = 65
+            case 3: lineWidth = 70
+            default: lineWidth = 55
             }
         }
         

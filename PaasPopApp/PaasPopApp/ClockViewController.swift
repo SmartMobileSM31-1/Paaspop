@@ -11,6 +11,8 @@ import UIKit
 
 class ClockViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
+    
     @IBOutlet var tableView: UITableView!
     
     @IBOutlet var clockView: UIView!
@@ -25,6 +27,8 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = Color.UIColorFromRGB(0xfedb46)
+        self.navigationController?.navigationBar.barTintColor = Color.UIColorFromRGB(0xff7f00)
         getFavoriteTimeSlots(true)
         tableView.reloadData()
     }

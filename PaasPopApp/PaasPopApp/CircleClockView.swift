@@ -36,10 +36,10 @@ class CircleClockView: UIView {
         CGContextSetLineWidth(context, 1.0);
         
         // Set the circle outerline-colour
-        UIColor.blackColor().set()
+        Color.UIColorFromRGB(0xfedb46).set()
         
         // Create Circle
-        CGContextAddArc(context, (frame.size.width)/2, frame.size.height/2, 75, 0.0, CGFloat(M_PI * 2.0), 1)
+        CGContextAddArc(context, (frame.size.width)/2, frame.size.height/2, 50, 0.0, CGFloat(M_PI * 2.0), 1)
         
         // Draw
         CGContextStrokePath(context);

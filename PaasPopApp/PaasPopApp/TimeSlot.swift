@@ -49,17 +49,7 @@ class TimeSlot: NSObject, NSCoding {
 //        self.start = start
 //        self.end = end
 //    }
-    class func getRandomColor() -> UIColor{
-        
-        var randomRed:CGFloat = CGFloat(drand48())
-        
-        var randomGreen:CGFloat = CGFloat(drand48())
-        
-        var randomBlue:CGFloat = CGFloat(drand48())
-        
-        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-        
-    }
+    
     
     init(fromNSDictionary dictionary: NSDictionary) {
         super.init()
@@ -79,7 +69,7 @@ class TimeSlot: NSObject, NSCoding {
         self.end = dateFormatter.dateFromString(endString)
         
         if (self.start != nil) && (self.end != nil) {
-            self.color = TimeSlot.getRandomColor()
+            self.color = Color.getRandomColor()
         } else {
             self.color = UIColor.blackColor()
         }

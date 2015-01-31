@@ -21,19 +21,26 @@ class ActDetailsViewController: UIViewController {
     
     @IBAction func buttonAddAction(sender: UIBarButtonItem) {
         var storedTimeSlots: [TimeSlot]
+        var duplicate = false
         if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
             storedTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]
             for timeSlot in storedTimeSlots {
-                println("\(timeSlot.act?.title)")
+                if self.timeSlot?.act?.title == timeSlot.act?.title {
+                    duplicate = true
+                }
             }
         } else {
             storedTimeSlots = [TimeSlot]()
         }
 
-        storedTimeSlots.append(timeSlot!)
-        
-        let data = NSKeyedArchiver.archivedDataWithRootObject(storedTimeSlots)
-        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "favorites")
+        if !duplicate {
+            storedTimeSlots.append(timeSlot!)
+            storedTimeSlots.sort({ (timeSlot1, timeSlot2) -> Bool in
+                return timeSlot1.act?.title < timeSlot2.act?.title
+            })
+            let data = NSKeyedArchiver.archivedDataWithRootObject(storedTimeSlots)
+            NSUserDefaults.standardUserDefaults().setObject(data, forKey: "favorites")
+        }
 
     }
     

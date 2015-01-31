@@ -56,7 +56,7 @@ class ActDetailsViewController: UIViewController {
         self.labelAdd.text = timeSlot?.act?.add
         var photoUrl = self.timeSlot?.act?.photo
         self.labelDescription.text = self.timeSlot?.act?.actDescription
-        
+        println("Start: \(self.timeSlot?.start) End: \(self.timeSlot?.end)")
         if (self.timeSlot != nil) {
             Alamofire.request(.GET, photoUrl!)
                 .response { (request, response, data, error) in

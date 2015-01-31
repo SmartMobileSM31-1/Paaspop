@@ -21,7 +21,8 @@ class BlogTableViewController: UITableViewController {
                     self.blogItems = DataHelper.getBlogItems(data as NSData)
                     self.tableView.reloadData()
                 } else {
-                    self.blogItems = DataHelper.getBlogItems()
+                    self.blogItems = DataHelper.getBlogItems(
+                    )
                     self.tableView.reloadData()
                 }
         }

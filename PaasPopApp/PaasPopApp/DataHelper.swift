@@ -11,14 +11,30 @@ import Alamofire
 
 class DataHelper {
     
-    class func getBlogItems(data: NSData) -> [BlogItem] {
-        var blogItemsData: NSData = data
-        var blogItems: [BlogItem]
-        blogItems = blogItemsParseData(blogItemsData)
-        return blogItems
+    class func getCacheDirectory() -> String {
+        var paths = NSSearchPathForDirectoriesInDomains(.ApplicationSupportDirectory,.UserDomainMask, true);
+        var cachePath: String = paths[0] as String
+        return cachePath
     }
     
-    class func blogItemsParseData(data: NSData) -> [BlogItem] {
+    class func getBlogItems() -> [BlogItem] {
+        var storedData: NSData? = NSFileManager.defaultManager().contentsAtPath(DataHelper.getCacheDirectory() + "blog.json")
+        if storedData != nil {
+            println("Using cached data for Blog Items.")
+            return getBlogItems(storedData!)
+        } else {
+            println("No cache data available.")
+            return [BlogItem]()
+        }
+    }
+    
+    class func getBlogItems(data: NSData) -> [BlogItem] {
+        var stored: Bool = NSFileManager.defaultManager().createFileAtPath(getCacheDirectory() + "blog.json", contents: data, attributes: nil)
+        if stored {
+            println("data stored")
+        } else {
+            println("not stored")
+        }
         var returnData: [BlogItem] = [BlogItem]()
         var error: NSError?
         let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as NSDictionary
@@ -32,18 +48,26 @@ class DataHelper {
         return returnData
     }
     
-    class func getTimeSlots(data: NSData) -> [TimeSlot] {
-        var timeSlotsData: NSData = data
-        
-        var timeSlots: [TimeSlot]
-        
-        timeSlots = timeSlotsParseData(timeSlotsData)
-        
-        
-        return timeSlots
+    class func getTimeSlots() -> [TimeSlot] {
+        var storedData: NSData? = NSFileManager.defaultManager().contentsAtPath(DataHelper.getCacheDirectory() + "acts.json")
+        if storedData != nil {
+            println("Using cached data for TimeSlots.")
+            return getTimeSlots(storedData!)
+        } else {
+            println("No cache data available.")
+            return [TimeSlot]()
+        }
     }
     
-    class func timeSlotsParseData(data: NSData) -> [TimeSlot] {
+    class func getTimeSlots(data: NSData) -> [TimeSlot] {
+        var stored: Bool = NSFileManager.defaultManager().createFileAtPath(getCacheDirectory() + "acts.json", contents: data, attributes: nil)
+        if stored {
+            println("data stored")
+        } else {
+            println("not stored")
+        }
+        
+        
         var returnData: [TimeSlot]
         var error: NSError?
         let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as NSDictionary

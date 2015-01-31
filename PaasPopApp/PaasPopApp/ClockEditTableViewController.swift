@@ -23,7 +23,10 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
         Alamofire.request(.GET, "http://wouterhabets.com/acts.json")
             .response { (request, response, data, error) in
                 if error == nil {
-                    self.timeSlots = DataHelper.timeSlotsParseData(data as NSData)
+                    self.timeSlots = DataHelper.getTimeSlots(data as NSData)
+                    self.tableView.reloadData()
+                } else {
+                    self.timeSlots = DataHelper.getTimeSlots()
                     self.tableView.reloadData()
                 }
         }

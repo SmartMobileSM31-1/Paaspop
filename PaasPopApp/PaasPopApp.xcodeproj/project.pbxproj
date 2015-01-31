@@ -10,6 +10,7 @@
 		6C03A3E81A7A1D7300E8DFA5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C08B2501A7A195700FE6F12 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C08B2571A7A197800FE6F12 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C08B2501A7A195700FE6F12 /* Alamofire.framework */; };
 		6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */; };
+		6C20A1BF1A7D235C00B7BB8B /* CircleTimeSlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C20A1BE1A7D235C00B7BB8B /* CircleTimeSlotView.swift */; };
 		6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E91C91A71135D0097E48D /* DataHelper.swift */; };
 		6C2FF6261A79CB93003E511F /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2FF6251A79CB93003E511F /* AddFriendViewController.swift */; };
 		6C340E051A79BFAE00F18FA4 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C340E041A79BFAE00F18FA4 /* FriendsTableViewController.swift */; };
@@ -19,11 +20,14 @@
 		6C58F3991A7A54D800A99962 /* BlogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58F3981A7A54D800A99962 /* BlogDetailViewController.swift */; };
 		6C58F39B1A7A555900A99962 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C58F39A1A7A555900A99962 /* clock.png */; };
 		6C5EC2591A7A366C00EF6725 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5EC2581A7A366C00EF6725 /* Logo.png */; };
+		6C7169EE1A7D2816002C4186 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7169ED1A7D2816002C4186 /* RandomColor.swift */; };
 		6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BAC9C1A5FD370007495BF /* MapViewController.swift */; };
 		6C8F29CF1A7845C90070E741 /* Koffie.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8F29CE1A7845C90070E741 /* Koffie.png */; };
 		6CAC4F1C1A79D61A007BB1DB /* FriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAC4F1B1A79D61A007BB1DB /* FriendDetailViewController.swift */; };
 		6CAC4F1E1A79D7A1007BB1DB /* cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CAC4F1D1A79D7A1007BB1DB /* cover.jpg */; };
 		6CAC4F201A79D7BA007BB1DB /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CAC4F1F1A79D7BA007BB1DB /* profile.jpg */; };
+		6CAC9EFA1A7D6C4200CE2B20 /* Woordmerk.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAC9EF91A7D6C4200CE2B20 /* Woordmerk.png */; };
+		6CB3F2881A7CFF6F0066D590 /* CircleClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB3F2871A7CFF6F0066D590 /* CircleClockView.swift */; };
 		6CB7DC9D1A58493A00195D87 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB7DC9C1A58493A00195D87 /* DemoData.swift */; };
 		6CD8A71C1A79A092000775BA /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8A71B1A79A092000775BA /* map.png */; };
 		6CD8A71E1A79A09A000775BA /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD8A71D1A79A09A000775BA /* search.png */; };
@@ -95,6 +99,7 @@
 /* Begin PBXFileReference section */
 		6C08B2491A7A195700FE6F12 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		6C201E011A67F1B000C25A13 /* ActDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActDetailsViewController.swift; sourceTree = "<group>"; };
+		6C20A1BE1A7D235C00B7BB8B /* CircleTimeSlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTimeSlotView.swift; sourceTree = "<group>"; };
 		6C2E91C91A71135D0097E48D /* DataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		6C2FF6251A79CB93003E511F /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		6C340E041A79BFAE00F18FA4 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -104,11 +109,14 @@
 		6C58F3981A7A54D800A99962 /* BlogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogDetailViewController.swift; sourceTree = "<group>"; };
 		6C58F39A1A7A555900A99962 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		6C5EC2581A7A366C00EF6725 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		6C7169ED1A7D2816002C4186 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		6C8BAC9C1A5FD370007495BF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6C8F29CE1A7845C90070E741 /* Koffie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Koffie.png; sourceTree = "<group>"; };
 		6CAC4F1B1A79D61A007BB1DB /* FriendDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendDetailViewController.swift; sourceTree = "<group>"; };
 		6CAC4F1D1A79D7A1007BB1DB /* cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover.jpg; sourceTree = "<group>"; };
 		6CAC4F1F1A79D7BA007BB1DB /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
+		6CAC9EF91A7D6C4200CE2B20 /* Woordmerk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Woordmerk.png; sourceTree = "<group>"; };
+		6CB3F2871A7CFF6F0066D590 /* CircleClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleClockView.swift; sourceTree = "<group>"; };
 		6CB7DC9C1A58493A00195D87 /* DemoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		6CD8A71B1A79A092000775BA /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		6CD8A71D1A79A09A000775BA /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
@@ -158,6 +166,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6C20A1BB1A7D221600B7BB8B /* Circles */ = {
+			isa = PBXGroup;
+			children = (
+				6CB3F2871A7CFF6F0066D590 /* CircleClockView.swift */,
+				6C20A1BE1A7D235C00B7BB8B /* CircleTimeSlotView.swift */,
+				6C7169ED1A7D2816002C4186 /* RandomColor.swift */,
+			);
+			name = Circles;
+			sourceTree = "<group>";
+		};
 		6C2E91C81A7113450097E48D /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +187,7 @@
 		F56467131A50443C002F68EF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6CAC9EF91A7D6C4200CE2B20 /* Woordmerk.png */,
 				6C58F39A1A7A555900A99962 /* clock.png */,
 				6CEEE24F1A7A37B800878DA0 /* clockFace.png */,
 				6C5EC2581A7A366C00EF6725 /* Logo.png */,
@@ -231,6 +250,7 @@
 		F59741911A430CE40074CA41 /* PaasPopApp */ = {
 			isa = PBXGroup;
 			children = (
+				6C20A1BB1A7D221600B7BB8B /* Circles */,
 				6C2E91C81A7113450097E48D /* JSON */,
 				F56467271A517EE8002F68EF /* ViewControllers */,
 				F56467221A505AFC002F68EF /* DomainClasses */,
@@ -383,6 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAC9EFA1A7D6C4200CE2B20 /* Woordmerk.png in Resources */,
 				6C58F39B1A7A555900A99962 /* clock.png in Resources */,
 				6C5EC2591A7A366C00EF6725 /* Logo.png in Resources */,
 				F597419A1A430CE40074CA41 /* Main.storyboard in Resources */,
@@ -423,11 +444,14 @@
 				6C201E021A67F1B000C25A13 /* ActDetailsViewController.swift in Sources */,
 				6C2E91CA1A71135D0097E48D /* DataHelper.swift in Sources */,
 				6C50E0711A58AB88000A5848 /* ClockEditTableViewController.swift in Sources */,
+				6CB3F2881A7CFF6F0066D590 /* CircleClockView.swift in Sources */,
 				F56467211A505AA7002F68EF /* Act.swift in Sources */,
 				F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */,
 				6C8BAC9D1A5FD370007495BF /* MapViewController.swift in Sources */,
 				6C58F3951A7A4EB500A99962 /* BlogTableViewController.swift in Sources */,
 				6C58F3991A7A54D800A99962 /* BlogDetailViewController.swift in Sources */,
+				6C7169EE1A7D2816002C4186 /* RandomColor.swift in Sources */,
+				6C20A1BF1A7D235C00B7BB8B /* CircleTimeSlotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

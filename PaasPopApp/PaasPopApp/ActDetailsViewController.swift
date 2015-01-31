@@ -18,22 +18,35 @@ class ActDetailsViewController: UIViewController {
     @IBOutlet var imageBand: UIImageView!
     @IBOutlet var labelAdd: UILabel!
     @IBOutlet var labelDescription: UITextView!
+    @IBOutlet var buttonAdd: UIBarButtonItem!
     
     @IBAction func buttonAddAction(sender: UIBarButtonItem) {
+        buttonAdd.image = UIImage(named: "StarFilled")
+        var duplicate = false
         var storedTimeSlots: [TimeSlot]
         if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
             storedTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]
-            for timeSlot in storedTimeSlots {
-                println("\(timeSlot.act?.title)")
+            for var i = 0; i < storedTimeSlots.count; i++ {
+                if self.timeSlot?.act?.title == storedTimeSlots[i].act?.title {
+                    println("is duplicate")
+                    storedTimeSlots.removeAtIndex(i)
+                    buttonAdd.image = UIImage(named: "Star")
+                    duplicate = true
+                    break
+                }
             }
         } else {
             storedTimeSlots = [TimeSlot]()
         }
 
-        storedTimeSlots.append(timeSlot!)
-        
-        let data = NSKeyedArchiver.archivedDataWithRootObject(storedTimeSlots)
-        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "favorites")
+        if !duplicate {
+            storedTimeSlots.append(timeSlot!)
+        }
+            storedTimeSlots.sort({ (timeSlot1, timeSlot2) -> Bool in
+                return timeSlot1.act?.title < timeSlot2.act?.title
+            })
+            let data = NSKeyedArchiver.archivedDataWithRootObject(storedTimeSlots)
+            NSUserDefaults.standardUserDefaults().setObject(data, forKey: "favorites")
 
     }
     
@@ -56,7 +69,7 @@ class ActDetailsViewController: UIViewController {
         self.labelAdd.text = timeSlot?.act?.add
         var photoUrl = self.timeSlot?.act?.photo
         self.labelDescription.text = self.timeSlot?.act?.actDescription
-        
+        println("Start: \(self.timeSlot?.start) End: \(self.timeSlot?.end)")
         if (self.timeSlot != nil) {
             Alamofire.request(.GET, photoUrl!)
                 .response { (request, response, data, error) in
@@ -67,6 +80,15 @@ class ActDetailsViewController: UIViewController {
             }
         }
         
+        
+        if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
+            var storedTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]
+            for timeSlot in storedTimeSlots {
+                if self.timeSlot?.act?.title == timeSlot.act?.title {
+                    buttonAdd.image = UIImage(named: "StarFilled")
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

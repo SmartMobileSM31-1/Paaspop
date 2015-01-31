@@ -15,6 +15,7 @@ class TimeSlot: NSObject, NSCoding {
     var day: Int?
     var start: NSDate?
     var end: NSDate?
+    var color: UIColor?
     
     required convenience init(coder decoder: NSCoder) {
         self.init()
@@ -23,6 +24,7 @@ class TimeSlot: NSObject, NSCoding {
         self.day = decoder.decodeObjectForKey("day") as Int?
         self.start = decoder.decodeObjectForKey("start") as NSDate?
         self.end = decoder.decodeObjectForKey("end") as NSDate?
+        self.color = decoder.decodeObjectForKey("color") as UIColor?
         
     }
     
@@ -33,21 +35,34 @@ class TimeSlot: NSObject, NSCoding {
         coder.encodeObject(self.day, forKey: "day")
         coder.encodeObject(self.start, forKey: "start")
         coder.encodeObject(self.end, forKey: "end")
+        coder.encodeObject(self.color, forKey: "color")
     }
     
     override init() {
         
     }
     
-    init(stage: Int, act: Act, day: Int ,start: NSDate, end: NSDate) {
-        self.stage = stage
-        self.act = act
-        self.day = day
-        self.start = start
-        self.end = end
+//    init(stage: Int, act: Act, day: Int ,start: NSDate, end: NSDate) {
+//        self.stage = stage
+//        self.act = act
+//        self.day = day
+//        self.start = start
+//        self.end = end
+//    }
+    class func getRandomColor() -> UIColor{
+        
+        var randomRed:CGFloat = CGFloat(drand48())
+        
+        var randomGreen:CGFloat = CGFloat(drand48())
+        
+        var randomBlue:CGFloat = CGFloat(drand48())
+        
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        
     }
     
     init(fromNSDictionary dictionary: NSDictionary) {
+        super.init()
         self.act = Act(fromNSDictionary: dictionary)
         let times: NSArray = dictionary["times"] as NSArray
         let time: NSDictionary = times[0] as NSDictionary
@@ -62,6 +77,12 @@ class TimeSlot: NSObject, NSCoding {
         
         self.start = dateFormatter.dateFromString(startString)
         self.end = dateFormatter.dateFromString(endString)
+        
+        if (self.start != nil) && (self.end != nil) {
+            self.color = TimeSlot.getRandomColor()
+        } else {
+            self.color = UIColor.blackColor()
+        }
     }
     
     func getStartCGFloat() -> CGFloat {
@@ -122,4 +143,5 @@ class TimeSlot: NSObject, NSCoding {
         // Convert the radian to a CGFloat
         return CGFloat(radian)
     }
+    
 }

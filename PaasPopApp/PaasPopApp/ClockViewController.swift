@@ -15,20 +15,8 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet var clockView: UIView!
     
-    var colorCounter = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//        var timeSlotCercle = CircleTimeSlotView(frame: CGRectMake(CGFloat(0), 0, circleWidth, circleHeight))
-//        timeSlotCercle.lineColor = UIColor.blueColor()
-//        timeSlotCercle.startTime = TimeSlot.timeToCGFloat("12:00")
-//        timeSlotCercle.endTime = TimeSlot.timeToCGFloat("14:00")
-        
-        
-
-//        clockView.addSubview(timeSlotCercle)
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,19 +26,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidAppear(animated: Bool) {
         getFavoriteTimeSlots(true)
-        clearClock()
         tableView.reloadData()
-    }
-    
-    func clearClock() {
-        colorCounter = 0
-        
-        for v in clockView.subviews {
-            v.removeFromSuperview()
-        }
-        
-        var circleView = CircleClockView(frame: CGRectMake(CGFloat(0), 0, CGFloat(200), CGFloat(200)))
-        clockView.addSubview(circleView)
     }
     
     var favoriteTimeSlots: [TimeSlot]?
@@ -59,6 +35,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         if force {
             favoriteTimeSlots = nil
         }
+        
         if favoriteTimeSlots == nil {
             if let storedData = NSUserDefaults.standardUserDefaults().objectForKey("favorites") as? NSData {
                 favoriteTimeSlots = NSKeyedUnarchiver.unarchiveObjectWithData(storedData) as [TimeSlot]?
@@ -66,6 +43,25 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
                 favoriteTimeSlots = [TimeSlot]()
             }
         }
+        
+        if force {
+            for v in clockView.subviews {
+                v.removeFromSuperview()
+            }
+            
+            var circleView = CircleClockView(frame: CGRectMake(CGFloat(0), 0, CGFloat(200), CGFloat(200)))
+            clockView.addSubview(circleView)
+            
+            for timeSlot in favoriteTimeSlots! {
+                var timeSlotCercle = CircleTimeSlotView(frame: CGRectMake(CGFloat(0), 0, CGFloat(200), CGFloat(200)))
+                timeSlotCercle.lineColor = timeSlot.color
+                timeSlotCercle.startTime = timeSlot.getStartCGFloat()
+                timeSlotCercle.endTime = timeSlot.getEndCGFloat()
+                
+                clockView.addSubview(timeSlotCercle)
+            }
+        }
+        
         return favoriteTimeSlots!
     }
     
@@ -81,34 +77,19 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell_inf") as UITableViewCell
         
-        
         var currentTimeSlot = getFavoriteTimeSlots(false)[indexPath.row]
         cell.textLabel?.text = currentTimeSlot.act?.title
+        cell.textLabel?.textColor = currentTimeSlot.color
         
-        if (currentTimeSlot.start != nil) && (currentTimeSlot.end != nil) {
-            var currentColor = RandomColor.getColor(colorCounter)
-            cell.textLabel?.textColor = currentColor
-            
-            var timeSlotCercle = CircleTimeSlotView(frame: CGRectMake(CGFloat(0), 0, CGFloat(200), CGFloat(200)))
-            timeSlotCercle.lineColor = currentColor
-            timeSlotCercle.startTime = currentTimeSlot.getStartCGFloat()
-            timeSlotCercle.endTime = currentTimeSlot.getEndCGFloat()
-            
-            clockView.addSubview(timeSlotCercle)
-            
-            colorCounter++
-        }
         return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            clearClock()
             favoriteTimeSlots?.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             setFavoriteTimeSlots(favoriteTimeSlots!)
             getFavoriteTimeSlots(true)
-            self.tableView.reloadData()
         }
     }
 

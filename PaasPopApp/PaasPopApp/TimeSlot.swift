@@ -134,4 +134,26 @@ class TimeSlot: NSObject, NSCoding {
         return CGFloat(radian)
     }
     
+    class func isInRange(timeSlot1: TimeSlot, timeSlot2: TimeSlot) -> Bool {
+        if timeSlot1.start == nil || timeSlot1.end == nil ||
+            timeSlot2.start == nil || timeSlot2.end == nil {
+            return false
+        } else {
+            var ts1start = (timeSlot1.start?.timeIntervalSinceReferenceDate)!
+            var ts1end = (timeSlot1.end?.timeIntervalSinceReferenceDate)!
+            
+            var ts2start = (timeSlot2.start?.timeIntervalSinceReferenceDate)!
+            var ts2end = (timeSlot2.start?.timeIntervalSinceReferenceDate)!
+            
+            if ( ts2start < ts2start && ts1end > ts2start ) ||
+                ( ts1start < ts2end && ts1end > ts2end ) {
+                return true
+            } else  {
+                return false
+            }
+        }
+        
+        
+    }
+    
 }

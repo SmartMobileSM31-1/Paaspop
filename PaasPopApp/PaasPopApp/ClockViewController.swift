@@ -66,6 +66,19 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
                 timeSlotCercle.startTime = timeSlot.getStartCGFloat()
                 timeSlotCercle.endTime = timeSlot.getEndCGFloat()
                 
+                var inRange = false
+                
+                for otherTimeSlot in favoriteTimeSlots! {
+                    if TimeSlot.isInRange(otherTimeSlot, timeSlot2: timeSlot) {
+                        inRange = true
+                        break
+                    }
+                }
+                
+                if inRange {
+                    timeSlotCercle.slotLayer = 1
+                }
+                
                 clockView.addSubview(timeSlotCercle)
             }
         }

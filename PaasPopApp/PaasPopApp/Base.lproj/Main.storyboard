@@ -138,6 +138,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vkH-Tj-jSh">
                                 <rect key="frame" x="0.0" y="280" width="600" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Q34-eu-gQz"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeSlotCell" textLabel="oju-W3-ZpH" style="IBUITableViewCellStyleDefault" id="Zse-Yd-ae6">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -166,20 +169,19 @@
                                 <rect key="frame" x="199" y="70" width="202" height="202"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="202" id="3ry-Md-kK7"/>
-                                    <constraint firstAttribute="width" constant="202" id="oUY-hJ-vps"/>
+                                    <constraint firstAttribute="width" secondItem="Eqe-dO-5v9" secondAttribute="height" multiplier="1:1" id="9El-or-bIx"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.23137254901960785" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vkH-Tj-jSh" firstAttribute="top" secondItem="Eqe-dO-5v9" secondAttribute="bottom" constant="8" id="77v-Ei-PdC"/>
                             <constraint firstItem="ccY-XU-dYn" firstAttribute="top" secondItem="EBO-Jz-5Lf" secondAttribute="bottom" constant="6" id="7fe-Gc-MnA"/>
                             <constraint firstItem="Eqe-dO-5v9" firstAttribute="top" secondItem="EBO-Jz-5Lf" secondAttribute="bottom" constant="6" id="E0n-CP-F5j"/>
                             <constraint firstItem="ccY-XU-dYn" firstAttribute="trailing" secondItem="L4x-gN-WiF" secondAttribute="trailingMargin" id="Os8-Qc-Gy0"/>
                             <constraint firstItem="Ylj-d3-N8I" firstAttribute="top" secondItem="EBO-Jz-5Lf" secondAttribute="bottom" constant="6" id="RnJ-mi-2rh"/>
                             <constraint firstItem="lHz-8T-6xF" firstAttribute="top" secondItem="vkH-Tj-jSh" secondAttribute="bottom" id="UWp-AG-AFd"/>
                             <constraint firstItem="Ylj-d3-N8I" firstAttribute="leading" secondItem="L4x-gN-WiF" secondAttribute="leadingMargin" id="aUK-YW-fOA"/>
+                            <constraint firstItem="vkH-Tj-jSh" firstAttribute="top" secondItem="Eqe-dO-5v9" secondAttribute="bottom" constant="8" id="s7l-7N-91p"/>
                             <constraint firstAttribute="centerX" secondItem="Eqe-dO-5v9" secondAttribute="centerX" id="tkw-rB-WdI"/>
                             <constraint firstItem="vkH-Tj-jSh" firstAttribute="leading" secondItem="L4x-gN-WiF" secondAttribute="leadingMargin" constant="-16" id="yWz-5W-X8t"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vkH-Tj-jSh" secondAttribute="trailing" constant="-16" id="z0J-iX-zBQ"/>

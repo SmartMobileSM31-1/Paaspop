@@ -53,14 +53,31 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
                 v.removeFromSuperview()
             }
             
-            var circleView = CircleClockView(frame: CGRectMake(CGFloat(0), 0, CGFloat(200), CGFloat(200)))
+            var height = clockView.frame.height
+            var width = clockView.frame.width
+            
+            var circleView = CircleClockView(frame: CGRectMake(CGFloat(0), 0, height, width))
             clockView.addSubview(circleView)
             
             for timeSlot in favoriteTimeSlots! {
-                var timeSlotCercle = CircleTimeSlotView(frame: CGRectMake(CGFloat(0), 0, CGFloat(200), CGFloat(200)))
+                
+                var timeSlotCercle = CircleTimeSlotView(frame: CGRectMake(CGFloat(0), 0, height, width))
                 timeSlotCercle.lineColor = timeSlot.color
                 timeSlotCercle.startTime = timeSlot.getStartCGFloat()
                 timeSlotCercle.endTime = timeSlot.getEndCGFloat()
+                
+                var inRange = false
+                
+                for otherTimeSlot in favoriteTimeSlots! {
+                    if TimeSlot.isInRange(otherTimeSlot, timeSlot2: timeSlot) {
+                        inRange = true
+                        break
+                    }
+                }
+                
+                if inRange {
+                    timeSlotCercle.slotLayer = 1
+                }
                 
                 clockView.addSubview(timeSlotCercle)
             }

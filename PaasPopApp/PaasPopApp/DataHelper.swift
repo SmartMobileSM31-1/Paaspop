@@ -85,4 +85,19 @@ class DataHelper {
         
         return timeSlots
     }
+    
+    class func getBioFromData(data: NSData) -> String {
+        println("\(data)")
+        var bio: String = ""
+        var error: NSError?
+        let jsonData = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &error) as NSDictionary
+        if error == nil {
+            let responses: NSDictionary = jsonData["response"] as NSDictionary
+            if let biographies: NSArray = responses["biographies"] as? NSArray {
+                let firstBio: NSDictionary = biographies[0] as NSDictionary
+                bio = firstBio["text"] as String
+            }
+        }
+        return bio
+    }
 }

@@ -75,7 +75,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell_inf") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("timeSlotCell") as UITableViewCell
         
         var currentTimeSlot = getFavoriteTimeSlots(false)[indexPath.row]
         cell.textLabel?.text = currentTimeSlot.act?.title

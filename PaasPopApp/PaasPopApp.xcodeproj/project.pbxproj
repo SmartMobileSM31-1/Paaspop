@@ -40,7 +40,6 @@
 		F597419A1A430CE40074CA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59741981A430CE40074CA41 /* Main.storyboard */; };
 		F597419C1A430CE40074CA41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597419B1A430CE40074CA41 /* Images.xcassets */; };
 		F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F597419D1A430CE40074CA41 /* LaunchScreen.xib */; };
-		F59741AB1A430CE40074CA41 /* PaasPopAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */; };
 		F5E06F461A4DAF8600AA46F3 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,13 +71,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
-		};
-		F59741A51A430CE40074CA41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F59741871A430CE40074CA41 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F597418E1A430CE40074CA41;
-			remoteInfo = PaasPopApp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -131,9 +123,6 @@
 		F59741991A430CE40074CA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F597419B1A430CE40074CA41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F597419E1A430CE40074CA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaasPopAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F59741A91A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaasPopAppTests.swift; sourceTree = "<group>"; };
 		F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,13 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C08B2571A7A197800FE6F12 /* Alamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F59741A11A430CE40074CA41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +230,6 @@
 			children = (
 				6C08B2491A7A195700FE6F12 /* Alamofire.xcodeproj */,
 				F59741911A430CE40074CA41 /* PaasPopApp */,
-				F59741A71A430CE40074CA41 /* PaasPopAppTests */,
 				F59741901A430CE40074CA41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -257,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				F597418F1A430CE40074CA41 /* PaasPopApp.app */,
-				F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,23 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				F59741931A430CE40074CA41 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F59741A71A430CE40074CA41 /* PaasPopAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				F59741AA1A430CE40074CA41 /* PaasPopAppTests.swift */,
-				F59741A81A430CE40074CA41 /* Supporting Files */,
-			);
-			path = PaasPopAppTests;
-			sourceTree = "<group>";
-		};
-		F59741A81A430CE40074CA41 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F59741A91A430CE40074CA41 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -320,24 +283,6 @@
 			productReference = F597418F1A430CE40074CA41 /* PaasPopApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F59741A31A430CE40074CA41 /* PaasPopAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F59741B11A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopAppTests" */;
-			buildPhases = (
-				F59741A01A430CE40074CA41 /* Sources */,
-				F59741A11A430CE40074CA41 /* Frameworks */,
-				F59741A21A430CE40074CA41 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F59741A61A430CE40074CA41 /* PBXTargetDependency */,
-			);
-			name = PaasPopAppTests;
-			productName = PaasPopAppTests;
-			productReference = F59741A41A430CE40074CA41 /* PaasPopAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,15 +290,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Maiko Hermans";
+				ORGANIZATIONNAME = Paaspop;
 				TargetAttributes = {
 					F597418E1A430CE40074CA41 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = CU3Z5M9BXQ;
-					};
-					F59741A31A430CE40074CA41 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = F597418E1A430CE40074CA41;
 					};
 				};
 			};
@@ -377,7 +318,6 @@
 			projectRoot = "";
 			targets = (
 				F597418E1A430CE40074CA41 /* PaasPopApp */,
-				F59741A31A430CE40074CA41 /* PaasPopAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -427,13 +367,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F59741A21A430CE40074CA41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -463,14 +396,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F59741A01A430CE40074CA41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F59741AB1A430CE40074CA41 /* PaasPopAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -478,11 +403,6 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = 6C08B2551A7A196500FE6F12 /* PBXContainerItemProxy */;
-		};
-		F59741A61A430CE40074CA41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F597418E1A430CE40074CA41 /* PaasPopApp */;
-			targetProxy = F59741A51A430CE40074CA41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -609,40 +529,6 @@
 			};
 			name = Release;
 		};
-		F59741B21A430CE40074CA41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PaasPopAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaasPopApp.app/PaasPopApp";
-			};
-			name = Debug;
-		};
-		F59741B31A430CE40074CA41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PaasPopAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaasPopApp.app/PaasPopApp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -660,15 +546,6 @@
 			buildConfigurations = (
 				F59741AF1A430CE40074CA41 /* Debug */,
 				F59741B01A430CE40074CA41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F59741B11A430CE40074CA41 /* Build configuration list for PBXNativeTarget "PaasPopAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F59741B21A430CE40074CA41 /* Debug */,
-				F59741B31A430CE40074CA41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

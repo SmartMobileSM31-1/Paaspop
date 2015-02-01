@@ -43,11 +43,6 @@ class Act: NSObject, NSCoding {
         self.add = add
         self.urlTitle = urlTitle
         self.photo = photo
-        self.actDescription = ""
-        
-        if title == "Anouk" {
-            self.actDescription = "Anouk Teeuwe (born 8 April 1975), professionally known by the mononym Anouk, is a Dutch singer-songwriter and producer. After her breakthrough in 1997 with the single \"Nobody's Wife\", she had numerous hit singles in the Dutch and Belgian charts, such as \"R U Kiddin' Me\", \"Michel\", \"Girl\", \"Lost\", \"Modern World\", \"Three Days in a Row\" and \"Woman\"."
-        }
     }
     
     init(fromNSDictionary dictionary: NSDictionary) {

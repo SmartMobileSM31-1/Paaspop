@@ -69,7 +69,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
                 var inRange = false
                 
                 for otherTimeSlot in favoriteTimeSlots! {
-                    if TimeSlot.isInRange(otherTimeSlot, timeSlot2: timeSlot) {
+                    if TimeUtils.isInRange(otherTimeSlot, timeSlot2: timeSlot) {
                         inRange = true
                         break
                     }

@@ -8,8 +8,9 @@
 
 import UIKit
 import AVFoundation
+import RSBarcodes
 
-class AddFriendViewController: UIViewController {
+class AddFriendViewController: RSCodeReaderViewController {
 
     var friends: [Person]?
     let captureSession = AVCaptureSession()
@@ -48,6 +49,21 @@ class AddFriendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.focusMarkLayer.strokeColor = UIColor.redColor().CGColor
+        
+        self.cornersLayer.strokeColor = UIColor.yellowColor().CGColor
+        
+        self.tapHandler = { point in
+            println(point)
+        }
+        
+        self.barcodesHandler = { barcodes in
+            for barcode in barcodes {
+                println(barcode)
+            }
+        }
+        
         captureSession.sessionPreset = AVCaptureSessionPresetLow
         let devices = AVCaptureDevice.devices()
         println(devices)

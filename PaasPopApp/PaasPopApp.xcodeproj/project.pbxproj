@@ -72,6 +72,20 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		F5EEBCE51A7FC2F9002D2C5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5EEBCE11A7FC2F9002D2C5F /* RSBarcodes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D08336371A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
+		F5EEBCE71A7FC305002D2C5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5EEBCE11A7FC2F9002D2C5F /* RSBarcodes.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D08336361A202E81004EE128;
+			remoteInfo = RSBarcodes;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -124,6 +138,7 @@
 		F597419B1A430CE40074CA41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F597419E1A430CE40074CA41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F5E06F451A4DAF8600AA46F3 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		F5EEBCE11A7FC2F9002D2C5F /* RSBarcodes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSBarcodes.xcodeproj; path = "../../RSBarcodes_Swift-master/RSBarcodes.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +243,7 @@
 		F59741861A430CE40074CA41 = {
 			isa = PBXGroup;
 			children = (
+				F5EEBCE11A7FC2F9002D2C5F /* RSBarcodes.xcodeproj */,
 				6C08B2491A7A195700FE6F12 /* Alamofire.xcodeproj */,
 				F59741911A430CE40074CA41 /* PaasPopApp */,
 				F59741901A430CE40074CA41 /* Products */,
@@ -261,6 +277,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F5EEBCE21A7FC2F9002D2C5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5EEBCE61A7FC2F9002D2C5F /* RSBarcodes.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +300,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F5EEBCE81A7FC305002D2C5F /* PBXTargetDependency */,
 				6C08B2561A7A196500FE6F12 /* PBXTargetDependency */,
 			);
 			name = PaasPopApp;
@@ -314,6 +339,10 @@
 					ProductGroup = 6C08B24A1A7A195700FE6F12 /* Products */;
 					ProjectRef = 6C08B2491A7A195700FE6F12 /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = F5EEBCE21A7FC2F9002D2C5F /* Products */;
+					ProjectRef = F5EEBCE11A7FC2F9002D2C5F /* RSBarcodes.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -342,6 +371,13 @@
 			fileType = wrapper.cfbundle;
 			path = AlamofireTests.xctest;
 			remoteRef = 6C08B2531A7A195700FE6F12 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F5EEBCE61A7FC2F9002D2C5F /* RSBarcodes.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSBarcodes.framework;
+			remoteRef = F5EEBCE51A7FC2F9002D2C5F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -403,6 +439,11 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = 6C08B2551A7A196500FE6F12 /* PBXContainerItemProxy */;
+		};
+		F5EEBCE81A7FC305002D2C5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSBarcodes;
+			targetProxy = F5EEBCE71A7FC305002D2C5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

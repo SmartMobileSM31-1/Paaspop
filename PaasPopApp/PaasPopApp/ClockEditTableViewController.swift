@@ -42,13 +42,15 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
         var actDetailViewController: ActDetailsViewController = segue.destinationViewController as ActDetailsViewController
         var selectedTimeSlot: TimeSlot
         
-        if self.tableView == self.searchDisplayController!.searchResultsTableView {
-            var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
-            selectedTimeSlot = filteredTimeSlots[selectedIndex]
-        } else {
-            var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
-            selectedTimeSlot = timeSlots[selectedIndex]
-        }
+            if (self.searchDisplayController?.active)! {
+                var selectedIndex = (self.searchDisplayController?.searchResultsTableView.indexPathForSelectedRow()!.row)!
+                selectedTimeSlot = filteredTimeSlots[selectedIndex]
+            } else {
+                var selectedIndex = self.tableView.indexPathForSelectedRow()!.row
+                selectedTimeSlot = timeSlots[selectedIndex]
+            }
+        
+        
         
         actDetailViewController.timeSlot = selectedTimeSlot
     }

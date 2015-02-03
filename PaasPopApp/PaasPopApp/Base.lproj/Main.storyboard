@@ -242,6 +242,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8OK-21-OM0" kind="show" identifier="favoriteActDetail" id="7FW-i9-E1y"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -652,4 +655,7 @@
         <image name="cover.jpg" width="800" height="600"/>
         <image name="profile.jpg" width="959" height="959"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7FW-i9-E1y"/>
+    </inferredMetricsTieBreakers>
 </document>

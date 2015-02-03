@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tBs-4R-XFc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tBs-4R-XFc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -364,45 +364,13 @@
         <scene sceneID="fKe-9n-KXx">
             <objects>
                 <viewController id="qbk-mV-heX" customClass="AddFriendViewController" customModule="PaasPopApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="t3o-EW-ZfQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="yil-o1-RJL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IOj-fi-FdE">
+                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code detected!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hbJ-Wy-WtI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-k5-kF7">
-                                <rect key="frame" x="180" y="72" width="240" height="240"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="MHx-qy-00P"/>
-                                    <constraint firstAttribute="height" constant="240" id="kVU-mE-vxj"/>
-                                </constraints>
-                            </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-mc-Y5f">
-                                <rect key="frame" x="180" y="320" width="240" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Nfx-fB-uly"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qta-Qh-rw2">
-                                <rect key="frame" x="277" y="156" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.023529411760000001" green="0.23137254900000001" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="uIb-mc-Y5f" secondAttribute="centerX" id="GUH-jL-aXn"/>
-                            <constraint firstItem="hPd-k5-kF7" firstAttribute="top" secondItem="t3o-EW-ZfQ" secondAttribute="bottom" constant="8" id="Qpp-qj-HH7"/>
-                            <constraint firstItem="uIb-mc-Y5f" firstAttribute="top" secondItem="hPd-k5-kF7" secondAttribute="bottom" constant="8" id="Thg-op-ue5"/>
-                            <constraint firstAttribute="centerX" secondItem="hPd-k5-kF7" secondAttribute="centerX" id="trQ-ew-vpE"/>
-                        </constraints>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <navigationItem key="navigationItem" title="Add friend" id="gQ2-vq-jH3">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="S9U-7G-wjF">
                             <connections>
@@ -411,8 +379,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emptyView" destination="hPd-k5-kF7" id="y5c-N7-rhX"/>
-                        <outlet property="textFieldName" destination="uIb-mc-Y5f" id="O6d-ub-gWz"/>
+                        <outlet property="qrcodefriend" destination="hbJ-Wy-WtI" id="Hgn-3w-vxn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chy-zy-GPc" userLabel="First Responder" sceneMemberID="firstResponder"/>

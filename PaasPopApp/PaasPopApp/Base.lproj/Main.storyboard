@@ -391,13 +391,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <navigationItem key="navigationItem" title="Add friend" id="gQ2-vq-jH3">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="S9U-7G-wjF">
-                            <connections>
-                                <action selector="addFriendAction:" destination="qbk-mV-heX" id="8bo-wc-g3Y"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add friend" id="gQ2-vq-jH3"/>
                     <connections>
                         <outlet property="qrcodefriend" destination="hbJ-Wy-WtI" id="Hgn-3w-vxn"/>
                     </connections>

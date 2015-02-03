@@ -9,20 +9,13 @@
 import UIKit
 import AVFoundation
 
-class AddFriendViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class AddFriendViewController: UIViewController, UIAlertViewDelegate, AVCaptureMetadataOutputObjectsDelegate {
     
     var friends: [Person]?
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     @IBOutlet var qrcodefriend: UILabel!
-    
-    @IBAction func addFriendAction(sender: UIBarButtonItem) {
-        var f: [Person] = getFriends()
-        f.append(Person(nameInput: qrcodefriend.text!))
-        setFriends(f)
-        self.navigationController?.popViewControllerAnimated(true)
-    }
     
     func getFriends() -> [Person] {
         if friends == nil {
@@ -92,8 +85,6 @@ class AddFriendViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         qrCodeFrameView?.layer.borderWidth = 2
         view.addSubview(qrCodeFrameView!)
         view.bringSubviewToFront(qrCodeFrameView!)
-
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -106,7 +97,6 @@ class AddFriendViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRectZero
-            qrcodefriend.text = "No QR code is detected"
             return
         }
         
@@ -125,6 +115,31 @@ class AddFriendViewController: UIViewController, AVCaptureMetadataOutputObjectsD
         let barCodeObject = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(metadataObj as AVMetadataMachineReadableCodeObject) as AVMetadataMachineReadableCodeObject
         
         qrCodeFrameView?.frame = barCodeObject.bounds
+
+        // Create the alert controller
+        var alertController = UIAlertController(title: "QR Code found!", message: "Add " + qrcodefriend.text! + " to friends?", preferredStyle: .Alert)
+        
+        // Create the actions
+        var okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+            UIAlertAction in
+            NSLog("OK Pressed")
+            var f: [Person] = self.getFriends()
+            f.append(Person(nameInput: self.qrcodefriend.text!))
+            self.setFriends(f)
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in
+            NSLog("Cancel Pressed")
+        }
+        
+        // Add the actions
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        // Present the controller
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
     
 }

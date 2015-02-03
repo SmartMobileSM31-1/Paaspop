@@ -47,7 +47,7 @@ class CircleClockView: UIView {
         
         CGContextBeginPath(context)
         CGContextMoveToPoint(context, (frame.size.width)/2, (frame.size.height)/2)
-        CGContextAddLineToPoint(context, (frame.size.width)/2, 508)
+        CGContextAddLineToPoint(context, (frame.size.width)/2, 50)
         CGContextStrokePath(context)
         
 

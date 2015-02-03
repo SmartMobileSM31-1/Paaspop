@@ -13,8 +13,12 @@ class FriendDetailViewController: UIViewController, UITableViewDelegate {
     var fav: [String] = [String]()
     var friend: Person?
     @IBOutlet var labelName: UILabel!
+    @IBOutlet var imageCover: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.imageCover.clipsToBounds = true
         
         if(friend?.name == "Geert")
         {

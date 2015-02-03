@@ -1,7 +1,7 @@
 # Nog te doen
-* Barcode scanner
+    - Barcode scanner
     - GUI verbeteren
-* Vrienden details fixen
+    - Vrienden details fixen
 * Zoeken fixen
     - Crash na zoeken oplossen
 * Map verbeteren

@@ -100,6 +100,8 @@ class ClockEditTableViewController: UITableViewController, UISearchBarDelegate, 
             
             // Optional scope search code
             // let categoryMatch = (scope == "All") || (band.category == scope)
+            let searchText = searchText.lowercaseString
+            
             let stringMatch = timeSlot.act?.title?.lowercaseString.rangeOfString(searchText)
             return (stringMatch != nil) // && categoryMatch
         })

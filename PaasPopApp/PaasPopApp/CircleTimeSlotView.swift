@@ -38,7 +38,7 @@ class CircleTimeSlotView: UIView {
         var context = UIGraphicsGetCurrentContext();
         
         // Set the circle outerline-width
-        CGContextSetLineWidth(context, 10.0);
+        CGContextSetLineWidth(context, 15.0);
         
         if lineColor == nil {
             println("Color is nil")
@@ -57,7 +57,7 @@ class CircleTimeSlotView: UIView {
         if slotLayer != nil {
             switch slotLayer! {
             case 0: lineWidth = 0
-            case 1: lineWidth = 40
+            case 1: lineWidth = 45
             case 2: lineWidth = 80
             case 3: lineWidth = 120
             default: lineWidth = 0

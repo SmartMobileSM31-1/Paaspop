@@ -72,10 +72,12 @@ class FriendsTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "friendDetails" {
-//            var friendDetailViewController: FriendDetailViewController = segue.destinationViewController as FriendDetailViewController
-//            var selectedRows = self.tableView.indexPathForSelectedRow()!.row
-//            var selectedFriend = friends[selectedRows]
-//            friendDetailViewController.friend = selectedFriend
+           var friendDetailViewController: FriendDetailViewController = segue.destinationViewController as FriendDetailViewController
+         var selectedRows = tableView.indexPathForSelectedRow()?.row
+            
+           let selectedFriend = friends[selectedRows]
+           friendDetailViewController.friend = selectedFriend
+            
             
         }
 

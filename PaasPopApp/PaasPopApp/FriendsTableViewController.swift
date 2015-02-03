@@ -75,7 +75,7 @@ class FriendsTableViewController: UITableViewController {
            var friendDetailViewController: FriendDetailViewController = segue.destinationViewController as FriendDetailViewController
          var selectedRows = tableView.indexPathForSelectedRow()?.row
             
-           let selectedFriend = friends[selectedRows]
+           let selectedFriend = friends?[selectedRows!]
            friendDetailViewController.friend = selectedFriend
             
             

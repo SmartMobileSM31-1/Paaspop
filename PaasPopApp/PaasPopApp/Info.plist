@@ -32,6 +32,11 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SourceSansPro-Regular.ttf</string>
+		<string>American Captain.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

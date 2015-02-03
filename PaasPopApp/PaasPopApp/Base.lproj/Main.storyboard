@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tBs-4R-XFc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tBs-4R-XFc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="American Captain.ttf">
+            <string>AmericanCaptain</string>
+            <string>AmericanCaptain</string>
+            <string>AmericanCaptain</string>
+            <string>AmericanCaptain</string>
+            <string>AmericanCaptain</string>
+        </mutableArray>
+        <mutableArray key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+            <string>SourceSansPro-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Blog-->
         <scene sceneID="39W-Dq-0R1">
@@ -68,7 +86,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ZCC-Ff-4OP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="21"/>
                                 <color key="textColor" red="0.99607843139999996" green="0.85882352939999995" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -77,7 +95,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gvI-9R-q89"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.94509803921568625" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,7 +103,7 @@
                                 <rect key="frame" x="16" y="159" width="568" height="421"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQA-Dq-9Cd">
@@ -93,7 +111,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="WIS-Zp-NOb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                 <color key="textColor" red="0.99607843139999996" green="0.85882352939999995" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -140,7 +158,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylj-d3-N8I">
-                                <rect key="frame" x="16" y="70" width="32" height="30"/>
+                                <rect key="frame" x="16" y="70" width="30" height="27"/>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="15"/>
                                 <state key="normal" title="Blog">
                                     <color key="titleColor" red="0.99607843139999996" green="0.85882352939999995" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,7 +169,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccY-XU-dYn">
-                                <rect key="frame" x="553" y="70" width="31" height="30"/>
+                                <rect key="frame" x="554" y="70" width="30" height="27"/>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="15"/>
                                 <state key="normal" title="Map">
                                     <color key="titleColor" red="0.99607843139999996" green="0.85882352939999995" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,7 +193,7 @@
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oju-W3-ZpH">
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -257,7 +277,7 @@
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EGr-8h-1Vn">
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -308,7 +328,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="N65-VP-NgA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="21"/>
                                 <color key="textColor" red="0.99607843137254903" green="0.85882352941176465" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -323,7 +343,7 @@
                                 <rect key="frame" x="16" y="274" width="568" height="306"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -403,7 +423,7 @@
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nw1-iU-JZd">
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -589,11 +609,11 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tijn Renders" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRa-XY-gYa">
-                                <rect key="frame" x="16" y="242" width="122" height="21"/>
+                                <rect key="frame" x="16" y="242" width="508" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NCS-9z-RqP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="21"/>
                                 <color key="textColor" red="0.99607843139999996" green="0.85882352939999995" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -611,6 +631,7 @@
                             <constraint firstItem="cig-18-P7O" firstAttribute="top" secondItem="yuS-k8-FFT" secondAttribute="bottom" constant="20" id="0nL-mx-8VC"/>
                             <constraint firstItem="lHU-rM-ISK" firstAttribute="top" secondItem="hMP-ty-Yiw" secondAttribute="bottom" constant="8" id="6vr-A6-Mch"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hMP-ty-Yiw" secondAttribute="trailing" constant="-16" id="AGM-Ww-6Bx"/>
+                            <constraint firstItem="lHU-rM-ISK" firstAttribute="leading" secondItem="cRa-XY-gYa" secondAttribute="trailing" constant="8" id="CIH-ky-DSO"/>
                             <constraint firstItem="yuS-k8-FFT" firstAttribute="trailing" secondItem="DYf-p7-aic" secondAttribute="trailingMargin" id="GxX-5s-Fjz"/>
                             <constraint firstItem="lHU-rM-ISK" firstAttribute="trailing" secondItem="DYf-p7-aic" secondAttribute="trailingMargin" id="WdW-nt-j3H"/>
                             <constraint firstItem="hMP-ty-Yiw" firstAttribute="top" secondItem="Fy6-hn-vVs" secondAttribute="bottom" id="aAC-7Q-fON"/>
@@ -661,6 +682,6 @@
         <image name="profile.jpg" width="959" height="959"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PpH-1H-erA"/>
+        <segue reference="G8K-Mn-paJ"/>
     </inferredMetricsTieBreakers>
 </document>

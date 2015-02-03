@@ -94,8 +94,11 @@ class DataHelper {
         if error == nil {
             let responses: NSDictionary = jsonData["response"] as NSDictionary
             if let biographies: NSArray = responses["biographies"] as? NSArray {
-                let firstBio: NSDictionary = biographies[0] as NSDictionary
-                bio = firstBio["text"] as String
+                println("biographies count: \(biographies.count)")
+                if let firstBio: NSDictionary = biographies[0] as? NSDictionary {
+                    bio = firstBio["text"] as String
+                }
+                
             }
         }
         return bio

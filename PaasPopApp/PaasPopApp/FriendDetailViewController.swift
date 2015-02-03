@@ -10,25 +10,25 @@ import UIKit
 
 class FriendDetailViewController: UIViewController, UITableViewDelegate {
 
-    var fav = []
+    var fav: [String] = [String]()
     var friend: Person?
     @IBOutlet var labelName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(friend == "Geert")
+        if(friend?.name == "Geert")
         {
             fav = ["Anouk", "Ares", "Best of Foo", "Blues Pills"]
         }
-        else if(friend == "Maiko")
+        else if(friend?.name == "Maiko")
         {
             fav=["Broederliefde", "Cho", "dEUS", "Dotan"]
         }
-        else if(friend == "Wouter")
+        else if(friend?.name == "Wouter")
         {
             fav=["Colin Cloud", "Anouk", "Fresku", "I Am Kloot"]
         }
-        else if(friend == "Tijn")
+        else if(friend?.name == "Tijn")
         {
             fav=["Ares", "Broederliefde", "Fresku", "Henry van Loon"]
         }
@@ -48,7 +48,7 @@ class FriendDetailViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
-        return self.fav.count;
+        return self.fav.count
     }
     
     func tableView(tableView: UITableView!,
@@ -59,16 +59,5 @@ class FriendDetailViewController: UIViewController, UITableViewDelegate {
         
         return cell
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

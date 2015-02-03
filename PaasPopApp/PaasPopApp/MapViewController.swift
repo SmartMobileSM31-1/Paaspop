@@ -27,6 +27,7 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
         imageView.image = UIImage(named: "map.png")
         scrollView.delegate = self
         updateZoom()
+        updateConstraints()
     }
     
 

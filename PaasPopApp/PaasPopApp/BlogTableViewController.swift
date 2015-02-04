@@ -15,6 +15,7 @@ class BlogTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PaaspopNavBar.setup(self.navigationController!)
         Alamofire.request(.GET, "http://wouterhabets.com/blog.json")
             .response { (request, response, data, error) in
                 if error == nil {

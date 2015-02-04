@@ -21,6 +21,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         
         PaaspopNavBar.setup(self.navigationController!)
+        self.tabBarController?.tabBar.tintColor = Color.UIColorFromRGB(0xfedb46)
     }
     
     override func didReceiveMemoryWarning() {

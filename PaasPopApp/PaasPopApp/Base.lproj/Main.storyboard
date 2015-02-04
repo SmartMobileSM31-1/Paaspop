@@ -26,7 +26,7 @@
             <objects>
                 <tableViewController id="LUM-37-WzV" customClass="BlogTableViewController" customModule="PaasPopApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QfT-Zi-zHc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,7 +75,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KIC-Yl-Xzo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vb5-mG-L1H">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Al-aX-pjr">
@@ -96,8 +96,8 @@
                                 <color key="textColor" red="1" green="0.94509803921568625" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-TY-Rz7">
-                                <rect key="frame" x="16" y="159" width="568" height="421"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNf-TY-Rz7">
+                                <rect key="frame" x="16" y="159" width="568" height="372"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
@@ -151,7 +151,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lHz-8T-6xF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="L4x-gN-WiF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E46-lp-bg5">
@@ -187,8 +187,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-qn-QfB">
-                                <rect key="frame" x="0.0" y="544" width="600" height="56"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-qn-QfB">
+                                <rect key="frame" x="0.0" y="544" width="600" height="7"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeSlotCell" textLabel="VIK-GW-rPP" style="IBUITableViewCellStyleDefault" id="Tvn-t3-bAJ">
@@ -247,7 +247,7 @@
             <objects>
                 <tableViewController id="y0V-Df-Sus" customClass="ClockEditTableViewController" customModule="PaasPopApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="AmA-jk-dwa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -310,7 +310,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YnL-uX-NUR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p77-Lz-6xF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqC-8J-vJ5">
@@ -329,8 +329,8 @@
                                     <constraint firstAttribute="width" secondItem="7Xz-2G-0me" secondAttribute="height" multiplier="60:17" id="SAj-uz-8kQ"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5YB-hv-Ll8">
-                                <rect key="frame" x="16" y="274" width="568" height="306"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YB-hv-Ll8">
+                                <rect key="frame" x="16" y="274" width="568" height="257"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
@@ -375,7 +375,7 @@
             <objects>
                 <viewController id="qbk-mV-heX" customClass="AddFriendViewController" customModule="PaasPopApp" customModuleProvider="target" sceneMemberID="viewController">
                     <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code detected!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hbJ-Wy-WtI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -395,7 +395,7 @@
             <objects>
                 <tableViewController id="h9k-VG-TeW" customClass="FriendsTableViewController" customModule="PaasPopApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6MR-Xh-8Z2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -444,11 +444,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wVQ-to-MPP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kTZ-NB-Ajm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="d6A-Cn-Jpg">
-                                <rect key="frame" x="0.0" y="20" width="600" height="1000"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="951"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Il3-aR-aCc">
                                         <rect key="frame" x="250" y="250" width="100" height="100"/>
@@ -498,7 +498,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cig-18-P7O"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DYf-p7-aic">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AII-or-GKn">
@@ -529,8 +529,8 @@
                                     <constraint firstAttribute="height" constant="50" id="MWd-hX-kcQ"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zoz-XR-EEr">
-                                <rect key="frame" x="16" y="300" width="568" height="280"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zoz-XR-EEr">
+                                <rect key="frame" x="16" y="300" width="568" height="231"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="yeN-FI-e42" style="IBUITableViewCellStyleDefault" id="Jar-0n-yls">
@@ -580,11 +580,11 @@
             </objects>
             <point key="canvasLocation" x="4653" y="1225"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="0FZ-ky-llZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tBs-4R-XFc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Isn-cf-dE3"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house-7.png" id="Isn-cf-dE3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pwi-gv-CrJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -608,10 +608,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AQU-MP-yWv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="16E-R7-cd4">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="16E-R7-cd4">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.99607843139999996" green="0.85882352939999995" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.99607843139999996" green="0.85882352939999995" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="tBs-4R-XFc" kind="relationship" relationship="viewControllers" id="t7q-eE-KjS"/>
@@ -624,11 +626,11 @@
             </objects>
             <point key="canvasLocation" x="2146" y="357"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Blog-->
         <scene sceneID="gFm-ec-tNB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Hu-DT-UEd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="bEl-3e-fRo"/>
+                    <tabBarItem key="tabBarItem" title="Blog" image="newspaper-7.png" id="bEl-3e-fRo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qzl-Yf-ZxA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -647,7 +649,7 @@
         <scene sceneID="34z-04-y5m">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ijC-Up-pZN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="UgY-tL-EuW"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="pin-map-7.png" id="UgY-tL-EuW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VUC-8G-pDf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -666,7 +668,7 @@
         <scene sceneID="cuc-LZ-WmF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ahp-28-hA0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" selectedImage="Friends" id="0CX-Ht-g9Y"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="games-abstract-7.png" selectedImage="Friends" id="0CX-Ht-g9Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ayU-82-BH9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -689,6 +691,10 @@
         <image name="Search" width="22" height="22"/>
         <image name="Star" width="22" height="22"/>
         <image name="cover.jpg" width="800" height="600"/>
+        <image name="games-abstract-7.png" width="30" height="30"/>
+        <image name="house-7.png" width="30" height="30"/>
+        <image name="newspaper-7.png" width="30" height="30"/>
+        <image name="pin-map-7.png" width="30" height="30"/>
         <image name="profile.jpg" width="959" height="959"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -42,6 +42,11 @@
 		F56467151A505938002F68EF /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467141A505938002F68EF /* Person.swift */; };
 		F564671D1A505A27002F68EF /* TimeSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564671C1A505A27002F68EF /* TimeSlot.swift */; };
 		F56467211A505AA7002F68EF /* Act.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56467201A505AA7002F68EF /* Act.swift */; };
+		F5795CEE1A81C0C500EEF474 /* cover2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5795CE91A81C0C500EEF474 /* cover2.jpg */; };
+		F5795CEF1A81C0C500EEF474 /* cover3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5795CEA1A81C0C500EEF474 /* cover3.jpg */; };
+		F5795CF01A81C0C500EEF474 /* profile2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5795CEB1A81C0C500EEF474 /* profile2.jpg */; };
+		F5795CF11A81C0C500EEF474 /* profile3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5795CEC1A81C0C500EEF474 /* profile3.jpg */; };
+		F5795CF21A81C0C500EEF474 /* profile4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5795CED1A81C0C500EEF474 /* profile4.jpg */; };
 		F59741951A430CE40074CA41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59741941A430CE40074CA41 /* AppDelegate.swift */; };
 		F597419A1A430CE40074CA41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F59741981A430CE40074CA41 /* Main.storyboard */; };
 		F597419C1A430CE40074CA41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F597419B1A430CE40074CA41 /* Images.xcassets */; };
@@ -130,6 +135,11 @@
 		F56467141A505938002F68EF /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F564671C1A505A27002F68EF /* TimeSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSlot.swift; sourceTree = "<group>"; };
 		F56467201A505AA7002F68EF /* Act.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Act.swift; sourceTree = "<group>"; };
+		F5795CE91A81C0C500EEF474 /* cover2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover2.jpg; sourceTree = "<group>"; };
+		F5795CEA1A81C0C500EEF474 /* cover3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cover3.jpg; sourceTree = "<group>"; };
+		F5795CEB1A81C0C500EEF474 /* profile2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile2.jpg; sourceTree = "<group>"; };
+		F5795CEC1A81C0C500EEF474 /* profile3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile3.jpg; sourceTree = "<group>"; };
+		F5795CED1A81C0C500EEF474 /* profile4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile4.jpg; sourceTree = "<group>"; };
 		F597418F1A430CE40074CA41 /* PaasPopApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaasPopApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F59741931A430CE40074CA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F59741941A430CE40074CA41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +235,11 @@
 				6C5EC2581A7A366C00EF6725 /* Logo.png */,
 				6CAC4F1F1A79D7BA007BB1DB /* profile.jpg */,
 				6CAC4F1D1A79D7A1007BB1DB /* cover.jpg */,
+				F5795CE91A81C0C500EEF474 /* cover2.jpg */,
+				F5795CEA1A81C0C500EEF474 /* cover3.jpg */,
+				F5795CEB1A81C0C500EEF474 /* profile2.jpg */,
+				F5795CEC1A81C0C500EEF474 /* profile3.jpg */,
+				F5795CED1A81C0C500EEF474 /* profile4.jpg */,
 				6CD8A71D1A79A09A000775BA /* search.png */,
 				6CD8A71F1A79A0BB000775BA /* friends.png */,
 				6CD8A71B1A79A092000775BA /* map.png */,
@@ -387,14 +402,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5795CF01A81C0C500EEF474 /* profile2.jpg in Resources */,
 				6CAC9EFA1A7D6C4200CE2B20 /* Woordmerk.png in Resources */,
 				6C58F39B1A7A555900A99962 /* clock.png in Resources */,
+				F5795CF11A81C0C500EEF474 /* profile3.jpg in Resources */,
 				6C5EC2591A7A366C00EF6725 /* Logo.png in Resources */,
 				6CEE212E1A817353004D7676 /* Logo-zonder-woordmerk.png in Resources */,
 				F597419A1A430CE40074CA41 /* Main.storyboard in Resources */,
 				6CDF9D801A81AC880040A52E /* pin-map-7.png in Resources */,
+				F5795CEF1A81C0C500EEF474 /* cover3.jpg in Resources */,
 				6CD8A7201A79A0BB000775BA /* friends.png in Resources */,
+				F5795CEE1A81C0C500EEF474 /* cover2.jpg in Resources */,
 				F597419F1A430CE40074CA41 /* LaunchScreen.xib in Resources */,
+				F5795CF21A81C0C500EEF474 /* profile4.jpg in Resources */,
 				F597419C1A430CE40074CA41 /* Images.xcassets in Resources */,
 				6CDF9D821A81ACB90040A52E /* games-abstract-7.png in Resources */,
 				6CD8A71E1A79A09A000775BA /* search.png in Resources */,

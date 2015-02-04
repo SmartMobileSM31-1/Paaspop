@@ -82,7 +82,7 @@ class ActDetailsViewController: UIViewController {
             let apiKey = "WUVZJBODI4TAKAJMJ"
             var actString: String = (self.timeSlot?.act?.title)!
             var formattedAct: String = actString.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
-            var apiUrl = NSURL(string: "http://developer.echonest.com/api/v4/artist/biographies?api_key=\(apiKey)&name=\(formattedAct)&format=json&results=1&start=0&license=cc-by-sa")!
+            var apiUrl = NSURL(string: "http://developer.echonest.com/api/v4/artist/biographies?api_key=\(apiKey)&name=\(formattedAct)&format=json&result=1&license=cc-by-sa")!
             println("\(apiUrl)")
             Alamofire.request(.GET, apiUrl)
                 .response { (request, response, data, error) in

@@ -19,6 +19,8 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        PaaspopNavBar.setup(self.navigationController!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,12 +29,7 @@ class ClockViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.navigationController?.navigationBar.tintColor = Color.UIColorFromRGB(0xfedb46)
-        self.navigationController?.navigationBar.barTintColor = Color.UIColorFromRGB(0xff7f00)
-
-        var titleFont: UIFont = UIFont(name: "American Captain", size: 21)!
-        let titleDict: [NSObject : AnyObject] = [NSForegroundColorAttributeName: Color.UIColorFromRGB(0xfedb46), NSFontAttributeName: titleFont]
-        self.navigationController?.navigationBar.titleTextAttributes = titleDict
+        
         getFavoriteTimeSlots(true)
         tableView.reloadData()
     }

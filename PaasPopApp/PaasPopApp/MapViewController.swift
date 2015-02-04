@@ -21,6 +21,11 @@ class MapViewController: UIViewController, UIScrollViewDelegate {
     
     var lastZoomScale: CGFloat = -1
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PaaspopNavBar.setup(self.navigationController!)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         

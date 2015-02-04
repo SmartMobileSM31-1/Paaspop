@@ -14,6 +14,7 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PaaspopNavBar.setup(self.navigationController!)
         var f: [Person] = getFriends(true)
     }
     

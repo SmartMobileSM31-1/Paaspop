@@ -14,6 +14,8 @@ class FriendDetailViewController: UIViewController, UITableViewDelegate {
     var friend: Person?
     @IBOutlet var labelName: UILabel!
     @IBOutlet var imageCover: UIImageView!
+    @IBOutlet weak var imageProfile: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,22 +25,32 @@ class FriendDetailViewController: UIViewController, UITableViewDelegate {
         if(friend?.name == "Geert")
         {
             fav = ["Anouk", "Ares", "Best of Foo", "Blues Pills"]
+            imageProfile.image = UIImage(named: "profile2.jpg")
+            imageCover.image = UIImage(named: "cover2.jpg")
         }
         else if(friend?.name == "Maiko")
         {
             fav=["Broederliefde", "Cho", "dEUS", "Dotan"]
+            imageProfile.image = UIImage(named: "profile4.jpg")
+            imageCover.image = UIImage(named: "cover3.jpg")
         }
         else if(friend?.name == "Wouter")
         {
             fav=["Colin Cloud", "Anouk", "Fresku", "I Am Kloot"]
+            imageProfile.image = UIImage(named: "profile3.jpg")
+            imageCover.image = UIImage(named: "cover.jpg")
         }
         else if(friend?.name == "Tijn")
         {
             fav=["Ares", "Broederliefde", "Fresku", "Henry van Loon"]
+            imageProfile.image = UIImage(named: "profile.jpg")
+            imageCover.image = UIImage(named: "cover.jpg")
         }
         else
         {
             fav=["Liptease", "July Talk", "Joris Voorn", "Jett Rebel"]
+            imageProfile.image = UIImage(named: "profile.jpg")
+            imageCover.image = UIImage(named: "Woordmerk.png")
         }
         
         // Do any additional setup after loading the view.
